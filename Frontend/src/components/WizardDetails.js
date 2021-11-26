@@ -1,8 +1,10 @@
 const WizardDetails = ({wizard}) => {
     return(
         <>
-    <p>{wizard}</p>
+    <p>{wizard.id}</p>
     <p>Hello</p>
     </>
     )
 }
+
+export default WizardDetails;
