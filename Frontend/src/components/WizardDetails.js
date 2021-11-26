@@ -1,8 +1,21 @@
+import WizardId from "./WizardId";
+
 const WizardDetails = ({wizard}) => {
+
+    const id = wizard.map((id, index) => {
+        return (
+            <div>
+                <WizardId id={id} index={index}/>
+            </div>
+        )
+    })
+
     return(
-        <>
-    <p>{wizard}</p>
-    <p>Hello</p>
+    <>
+        {id}
+        <p>Hello</p>
     </>
     )
 }
+
+export default WizardDetails;

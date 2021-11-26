@@ -1,13 +1,13 @@
 import {useState, useEffect} from 'react';
-import WizardDetails from './components/WizardDetails'
+import WizardDetails from '../components/WizardDetails';
 
 const GameBoard = () => {
-    [wizard, setWizard] = useState(null);
+    const [wizard, setWizard] = useState(null);
 
     useEffect(() => {
-        fetch("http://localhost:8080/api/v1/characters")
-        .then((reponse) => response.json())
-        .then(data => useEffect(setWizard(data)));
+        fetch("http://localhost:8080/api/v1/schools")
+        .then((response) => response.json())
+        .then(data => setWizard(data));
     })
 
     return (
