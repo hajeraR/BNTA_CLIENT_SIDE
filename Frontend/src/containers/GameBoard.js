@@ -10,6 +10,8 @@ const GameBoard = () => {
         .then(data => setWizard(data));
     })
 
+    const [spells, setSpells] = useState([]);
+
     return (
         wizard ?
           <>
