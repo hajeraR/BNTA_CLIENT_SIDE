@@ -1,1 +1,0 @@
-# BNTA_CLIENT_SIDE
