@@ -29,7 +29,6 @@ return (
     
     <Routes>
         <Route path="list-of-spells" element={<GameBoard />} />
-
     </Routes>
     </>
 
