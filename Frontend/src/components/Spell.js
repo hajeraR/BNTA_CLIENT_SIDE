@@ -1,3 +1,5 @@
+
+
 import React, {useState} from 'react';
 import Modal from './modal/Modal';
 
@@ -16,5 +18,6 @@ const Spell = ({spell}) => {
    
     )
 }
+
 
 export default Spell;

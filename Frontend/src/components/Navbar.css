@@ -1,0 +1,17 @@
+
+.navbar-container {
+    display:flex;
+    justify-content: space-between;
+    color: white;
+    background-color: black;
+}
+
+.navbar-logo{
+    padding: 1em;
+}
+
+.navbar-right{
+    display: flex;
+    gap: 1em;
+    margin-right: 1em;
+}
