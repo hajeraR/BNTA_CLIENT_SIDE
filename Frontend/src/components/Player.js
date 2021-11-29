@@ -4,6 +4,7 @@ import PlayerDetails from './PlayerDetails';
 
 const Player = () => {
 
+    const [modalShown, setModalShown] = useState(false);
     
     return (
         <div className="player">
