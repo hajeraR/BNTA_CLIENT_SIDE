@@ -361,10 +361,10 @@ h1 {
   
 }
 
-.spell h3{
+.spell h3 {
   margin-left: 5%;
-=======
-@-webkit-keyframes fadeInS {
+}
+  @-webkit-keyframes fadeInS {
   0% {opacity:0;}
   100% {opacity:0.35;}
 }
