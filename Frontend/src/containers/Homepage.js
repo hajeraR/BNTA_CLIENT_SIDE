@@ -5,6 +5,7 @@ import {
     Route,
     Link
   } from "react-router-dom";
+import RollDice from "../components/RoleDice";
 const Homepage = () => {
 
 return (
@@ -22,6 +23,9 @@ return (
         <div className="mainboxGame">
             <span className="mainboxGameText"> Track your Game </span> </div>
     </div></div>
+    <div>
+    <RollDice />
+    </div>
     
     <Routes>
         <Route path="list-of-spells" element={<GameBoard />} />
