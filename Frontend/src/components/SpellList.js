@@ -11,7 +11,6 @@ const SpellList = ({spells}) => {
     })
 
 
-    //returning thetask components from above
     return(
         <div className="spell-list">
             {spellComponent}
