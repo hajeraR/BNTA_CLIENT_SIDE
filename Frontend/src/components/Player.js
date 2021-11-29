@@ -3,12 +3,15 @@ import './Player.css';
 import PlayerDetails from './PlayerDetails';
 
 const Player = () => {
+
+    
     return (
         <div className="player">
             <h1>List of all players</h1>
 
             <div className="player__button__container">
-                <button className="player__button">Add Player</button>
+                <button className="player__button" onClick={() => {setModalShown(true);}}>Add Player</button>
+                {modalShown && <ModalCharacterForm close={setModalShown}/>}
             </div>
 
             <div className="player__container">
