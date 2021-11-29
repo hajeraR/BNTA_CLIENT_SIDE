@@ -8,7 +8,7 @@ function App() {
     <>
 
       {/* <GameBoard /> */}
-      <Homepage />
+      <Player />
 
     </>
   );

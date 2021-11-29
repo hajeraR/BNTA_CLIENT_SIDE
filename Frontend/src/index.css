@@ -218,152 +218,20 @@ td {
 }
 
 
-h1 {
+h2 {
   display: flex;
   justify-content: center;
 }
 
-.form_button{
-  min-width: 50px;
-  padding: 16px 32px;
-  border-radius: 4px;
-  border: none;
-  background: black;
-  color: white;
-  cursor: pointer;
-}
-
-.Modal_background{
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.75);
-  position: fixed;
+.player__details{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  z-index: 1000;
+  gap: 2em;
 }
 
-.Modal_content{
-  width: 55%;
-  height: 60%;
-  background-color: #E0C0A6;
-  border-radius: 12px;
-  box-shadow: black 0px 5px 15px;
-  display: flex;
-  flex-direction: column;
-  padding: 25px;
-}
 
-/* .Modal_content .title {
-  display: inline-block;
-  text-align: center;
-  margin-top: 10px;
-} */
 
-.form_top{
-  display: flex;
-  /* justify-content: flex-end; */
-  justify-content: space-between;
-  
-}
 
-.form_top .title{
-  margin-left: 35%;
-}
 
-.form_top button {
-  background-color: transparent;
-  border: none;
-  font-size: 25px;
-  cursor: pointer;
-  
-}
-
-.modal_mid_section{
-  display: flex;
-  /* justify-content: space-between; */
-  /* align-items: center; */
-}
-
-.form{
-  display: table;
-  margin-top: 5%;
-  width: 40%;
-  /* margin-right: 60%; */
-}
-
-.formElement{
-  display: table-row;
-  margin: 1em;
-}
-
-.form label{
-  display: table-cell;
-}
-
-.form input { 
-  display: table-cell;
-  margin-left: 1em; 
-  margin-bottom: 1.5em;
-  width: 130%;
-}
-
-.filter_spell{
-  justify-items: auto;
-  border: black solid 1px;
-  margin: 5%;
-  width: 55%;
-  overflow-y: scroll;
-  height: 300px;
-
-}
-
-.search{
-  margin-left: 10%;
-  margin-top: 10%;
-}
-
-.search input{
-  width: 420px;
-  height: 40px;
- 
-}
-
-.search ::placeholder{
-  font-size: 130%;
-}
-
-.add_spells{
-  margin: 5%;
-  width: 450px;
-  overflow-y: scroll;
-  height: 300px;
-}
-
-.spell{
-  display: flex;
-  justify-content: space-between;
-  
- 
-}
-
-.spell .add_spell{
-  background-color: transparent;
-  border: none;
-  font-size: 25px;
-  cursor: pointer;
-  width: 30px;
-  height: 30px;
-  
-}
-
-.spell h3{
-  margin-left: 5%;
-=======
 @-webkit-keyframes fadeInS {
   0% {opacity:0;}
   100% {opacity:0.35;}
