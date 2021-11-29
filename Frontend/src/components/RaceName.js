@@ -1,6 +1,6 @@
 const RaceName = ({race}) => {
     
-
+    
     
 
     return(

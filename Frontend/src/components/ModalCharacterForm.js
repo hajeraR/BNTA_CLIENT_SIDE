@@ -48,14 +48,31 @@ const ModalCharacterForm = ({close, onTaskSubmission}) => {
         return spells.filter((spell) => spell.spellName.toLowerCase().indexOf(search) > -1); 
     }
         
-    // const handleRaceChange = (event) => {
+    const handleRaceChange = (event) => {
         
-    //     setRace(event.target.value);
-    // }
+            if(event === 'Dwarf') setRace(1);
+            if(event === 'Halfling') setRace(2);
+            if(event === 'Half-elf') setRace(3);
+            if(event === 'Human') setRace(4);
+            if(event === 'Elf') setRace(5);
+            if(event === 'DragonBorn') setRace(6);
+            if(event === 'Half-Orc') setRace(7);
+            if(event === 'Tiefling') setRace(8);
+            if(event === 'Gnome') setRace(9);
+        
+    }
 
-    // const handleClassNameChange = (event) => {
-    //     setClassName(event.target.value);
-    // }
+    const handleClassNameChange = (event) => {
+        if(event === 'Bard') setClassName(1);
+        if(event === 'Cleric') setClassName(2);
+        if(event === 'Druid') setClassName(3);
+        if(event === 'Paladin') setClassName(4);
+        if(event === 'Sorceror') setClassName(5);
+        if(event === 'Warlock') setClassName(6);
+        if(event === 'Wizard') setClassName(7);
+        if(event === 'Ranger') setClassName(8);
+     
+    }
 
     const handleNameChange = (event) => {
         setName(event.target.value);
@@ -69,12 +86,14 @@ const ModalCharacterForm = ({close, onTaskSubmission}) => {
     const handleFormSubmission = (event) => {
         event.preventDefault();
 
+
+
         //assign values to keys
         const newPlayer = {
             name: name,
             level: level,
-            race: races.id,
-            class: classes.id
+            race: races,
+            class: classes
     
         }
 
@@ -115,7 +134,7 @@ const ModalCharacterForm = ({close, onTaskSubmission}) => {
                             <div className="formElement">
                                 <label htmlFor="race">Race: </label>
 
-                                <select name="selectList" id="selectList" onSubmit ={event => setRace(event.currentTarget.value)}>
+                                <select name="selectList" id="selectList" onChange ={handleRaceChange}>
                                 <RaceList races={races}/>
                                 
                                 </select>
@@ -123,19 +142,19 @@ const ModalCharacterForm = ({close, onTaskSubmission}) => {
                             </div>
                             <div className="formElement">
                                 <label htmlFor="class">Class: </label>
-                                <select name="selectList" id="selectList" onSubmit ={event => setClassName(event.currentTarget.value)}>
+                                <select name="selectList" id="selectList" onChange ={handleClassNameChange}>
                                     <ClassList classes={classes}/>
                                 </select>
                             </div>
                            
                             <div className="formElement">
-                                <input type="submit" value="SUBMIT" />
+                                <input type="submit" value="SUBMIT" onSubmit={handleFormSubmission}/>
                             </div>
                         </form>
                     </div>
                     <div className="filter_spells">
                         <div className="search">
-                            <input type="search" placeholder="search spells" onSubmit={handleSearchChange} value={search}/>
+                            <input type="search" placeholder="search spells" onChange={handleSearchChange} value={search}/>
                         </div>
                         <div className="add_spells">
                             <SpellList spells={filter(spells)}/>
