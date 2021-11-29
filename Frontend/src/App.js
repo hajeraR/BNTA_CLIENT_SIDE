@@ -1,14 +1,15 @@
 import Navbar from "./components/Navbar";
 import Player from "./components/Player";
 import GameBoard from "./containers/GameBoard";
+import Homepage from "./containers/Homepage";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <h1>Player Tracker!</h1>
-      <Player />
-      <GameBoard />
+
+      {/* <GameBoard /> */}
+      <Homepage />
+
     </>
   );
 }
