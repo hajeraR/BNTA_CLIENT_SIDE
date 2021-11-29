@@ -14,7 +14,7 @@ const GameBoard = () => {
   const [spells, setSpells] = useState([]);
 
   useEffect(() => {
-    fetch("")
+    fetch("http://localhost:8080/api/v1/spells")
     .then(response => response.json())
     .then(data => setSpells(data));
   })
@@ -26,16 +26,16 @@ const GameBoard = () => {
 }
 
 const searching = (spells) => {
-  return spells.filter((spell) => spell.spell_name.toLowerCase().indexOf(search) > -1); 
+  return spells.filter((spell) => spell.spellName.toLowerCase().indexOf(search) > -1); 
 }
 
 
     return (
-        wizard ?
-          <>
-            <WizardDetails wizard={wizard}/>
-          </>
-          :
+        // wizard ?
+        //   <>
+        //     <WizardDetails wizard={wizard}/>
+        //   </>
+        //   :
           <>
           <SpellDetails spells={searching(spells)} search={search} handleSearching={handleSearching} />
           </>

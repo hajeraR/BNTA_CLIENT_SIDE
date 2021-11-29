@@ -29,12 +29,20 @@
 
 .modal-header{
     margin: 0;
+    text-align: center;
 }
 
 .modal-body {
     padding: 1rem;
     border-top: 1px solid #777;
     border-bottom: 1px solid #777;
-
+    text-align: center;
 }
 
+.modal-footer {
+    display: flex;
+}
+
+.modal-close-btn {
+    margin: auto;
+}

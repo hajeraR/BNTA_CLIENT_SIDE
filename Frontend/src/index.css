@@ -68,12 +68,45 @@ body {
 
 
 /* Table */
-.spell-table {
-  width: 100%;
+.spells-container {
   border: 2px solid #777;
+  display: inline-block;
+  height: 500px;
+  overflow-y: auto;
+  width: 80%;
+  
+}
+
+.spells-container::-webkit-scrollbar {
+  display: none;
+}
+
+.spell-table {
   border-collapse: collapse;
+  width: 100%;
+}
+
+.spell-table th {
+  position: sticky;
+  top: 0;
 }
 
 th {
-  border: 2px solid #777;
+  background-color: #1976D2;
+  color: #fff;
+}
+
+.th, td {
+  padding: 1rem 0.5rem;
+  text-align: center;
+}
+
+.table-data {
+  overflow: scroll;
+  width: 100%;
+  height: 500px;
+}
+
+td {
+  border-bottom: 1px solid #777;
 }
