@@ -31,11 +31,6 @@ const searching = (spells) => {
 
 
     return (
-        // wizard ?
-        //   <>
-        //     <WizardDetails wizard={wizard}/>
-        //   </>
-        //   :
           <>
           <SpellDetails spells={searching(spells)} search={search} handleSearching={handleSearching} />
           </>

@@ -12,7 +12,7 @@ return (
 <div id="wrapper">
     <div className="MainBoxContainer">
         <div className="mainboxSpells">
-           <span className="mainboxSpellsText">View All Spells </span>
+           <a href="./GameBoard.js" className="mainboxSpellsText">View All Spells </a>
            </div>
         <div className="mainboxGame">
             <span className="mainboxGameText"> Track your Game </span> </div>
