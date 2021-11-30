@@ -18,7 +18,7 @@ const SpellDetails = ({spells, search, handleSearching}) => {
 
     return(
         <section className="spells">
-        <h2 className="headings">List of Spells</h2>
+        <h1 className="headings">List of Spells</h1>
 
         <Link to="..">Back to home</Link>
         <Link to="../player-tracker">Track Player</Link>
