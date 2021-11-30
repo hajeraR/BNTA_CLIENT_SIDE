@@ -1,10 +1,15 @@
 import PlayerDetails from "./PlayerDetails";
+import SavedSpell from "./SavedSpell";
 
 const PlayerList = ({players}) => {
 
     const playerComponent = players.map(player => {
         return(
-            <PlayerDetails player={player} key={player.id}/>
+            <div>
+                <PlayerDetails player={player} key={player.id}/>
+                <SavedSpell player={player} key={player.id}/>
+            </div>
+            
         )
     })
 

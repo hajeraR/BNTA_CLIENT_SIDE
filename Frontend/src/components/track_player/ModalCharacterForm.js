@@ -6,8 +6,8 @@ import ClassList from "./ClassList";
 
 const ModalCharacterForm = ({close, onPlayerSubmission}) => {
 
-    const [spells, setSpells] = useState([]);
-    const [search, setSearch] = useState('');
+    
+    
     const [races, setRace] = useState([]);
     const [racesIds, setRaceId] = useState(1); 
     const [classes, setClassName] = useState([]);
@@ -15,14 +15,14 @@ const ModalCharacterForm = ({close, onPlayerSubmission}) => {
     const [name, setName] = useState('');
     const [level, setLevel] = useState();
 
-    const getSpellData = () => {
-        fetch("http://localhost:8080/api/v1/spells")
-        .then((response) => response.json())
-        .then(data => setSpells(data));
+    // const getSpellData = () => {
+    //     fetch("http://localhost:8080/api/v1/spells")
+    //     .then((response) => response.json())
+    //     .then(data => setSpells(data));
     
-    }
+    // }
 
-    useEffect(getSpellData, []);
+    // useEffect(getSpellData, []);
 
     const getRaceData = () => {
         fetch("http://localhost:8080/api/v1/races")
@@ -42,13 +42,7 @@ const ModalCharacterForm = ({close, onPlayerSubmission}) => {
     
 
 
-    const handleSearchChange = (event) => {
-        setSearch(event.target.value);
-    }
-
-    const filter = (spells) => {
-        return spells.filter((spell) => spell.spellName.toLowerCase().indexOf(search) > -1); 
-    }
+    
     
     
         
@@ -58,19 +52,6 @@ const ModalCharacterForm = ({close, onPlayerSubmission}) => {
 
       console.log(event.target.value);
       
-        
-        //     if(event.target.value === 'Dwarf') return setRaceId(1);
-        //     if(event.target.value === 'Halfling') return setRaceId(2);
-        //     if(event.target.value === 'Half-elf') return setRaceId(3);
-        //     if(event.target.value === 'Human') return setRaceId(4);
-        //     if(event.target.value === 'Elf') return setRaceId(5);
-        //     if(event.target.value === 'DragonBorn') return setRaceId(6);
-        //     if(event.target.value === 'Half-Orc') return setRaceId(7);
-        //     if(event.target.value === 'Tiefling') return setRaceId(8);
-        //     if(event.target.value === 'Gnome') return setRaceId(9);
-
-        // console.log(racesIds)
-       
         
     }
 
@@ -82,17 +63,6 @@ const ModalCharacterForm = ({close, onPlayerSubmission}) => {
 
         console.log(event.target.value)
 
-        // if(event.target.value === 'Bard') return setClassId(1);
-        // if(event.target.value === 'Cleric') setClassId(2);
-        // if(event.target.value === 'Druid') setClassId(3);
-        // if(event.target.value === 'Paladin') setClassId(4);
-        // if(event.target.value === 'Sorceror') setClassId(5);
-        // if(event.target.value === 'Warlock') setClassId(6);
-        // if(event.target.value === 'Wizard') setClassId(7);
-        // if(event.target.value === 'Ranger') setClassId(8);
-
-        // console.log(classids);
-     
     }
 
     const handleNameChange = (event) => {
@@ -134,6 +104,14 @@ const ModalCharacterForm = ({close, onPlayerSubmission}) => {
 
     }
     
+    // const spellValidation = () => {
+
+    //     if (level < spells.level){
+    //         return (
+    //             <div>stop</div>
+    //         )
+    //     }
+    // }
 
     return(
         <div className="Modal_background">
@@ -179,14 +157,7 @@ const ModalCharacterForm = ({close, onPlayerSubmission}) => {
                             </div>
                         </form>
                     </div>
-                    <div className="filter_spells">
-                        <div className="search">
-                            <input type="search" placeholder="search spells" onChange={handleSearchChange} value={search}/>
-                        </div>
-                        <div className="add_spells">
-                            <SpellList spells={filter(spells)}/>
-                        </div>
-                    </div>
+                   
                     
                     
                 </div>

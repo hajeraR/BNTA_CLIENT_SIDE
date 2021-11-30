@@ -1,6 +1,12 @@
 import React from 'react';
+import { useState } from 'react';
+import SpellBook from './SpellBook';
+
 
 const PlayerDetails = ({player}) => {
+
+  const [show, setShow] = useState(false);
+
     return (
         <>
           <li className="player__item">
@@ -15,7 +21,11 @@ const PlayerDetails = ({player}) => {
                 Class: <p>{player.class_id}</p>
               </h5>
               <h5>
-                <a>Spellbook:</a>
+                Level: <p>{player.character_level}</p>
+              </h5>
+              <h5>
+                <p onClick={() => {setShow(true)}}>Spellbook:</p>
+                <SpellBook onClose={() => {setShow(false)}} show={show} player={player}/>
               </h5>
             </div>
           </li>
