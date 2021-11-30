@@ -1,4 +1,4 @@
-import Spell from "./Spell";
+import SpellName from "./SpellName";
 
 
 const SpellList = ({spells}) => {
@@ -6,7 +6,7 @@ const SpellList = ({spells}) => {
     
     const spellComponent = spells.map(spell => {
         return(
-            <Spell spell={spell} key={spell.id}/>
+            <SpellName spell={spell} key={spell.id}/>
         )
     })
 

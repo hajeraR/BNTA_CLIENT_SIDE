@@ -1,14 +1,23 @@
 import React from 'react';
 
-const PlayerDetails = (props) => {
+const PlayerDetails = ({player}) => {
     return (
         <>
           <li className="player__item">
-            <a className="player__details">
-                <div className="player__details__info">
-                <h5 className="player__details__text">{props.text}</h5>
-                </div>
-            </a>
+            <div className="player__details">
+              <h5>
+                Name: {player.name}
+              </h5>
+              <h5>
+                Race: <p>{player.race_id}</p>
+              </h5>
+              <h5>
+                Class: <p>{player.class_id}</p>
+              </h5>
+              <h5>
+                <a>Spellbook:</a>
+              </h5>
+            </div>
           </li>
 
       </>

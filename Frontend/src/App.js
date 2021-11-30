@@ -9,12 +9,14 @@ import RollDice from "./components/RoleDice";
 
 function App() {
   return (
+
     <BrowserRouter>
 <Routes>
   <Route path="/" element={<Home />} />
   <Route path="/list-of-spells" element={<Gameboard />} />
 </Routes>
     </BrowserRouter>
+
   );
 }
 
