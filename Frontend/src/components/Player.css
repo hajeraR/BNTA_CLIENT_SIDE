@@ -41,5 +41,8 @@
     cursor: pointer;
 }
 
-
+.player__title {
+    display: flex;
+    justify-content: center;
+}
 

@@ -3,6 +3,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 import {Link} from "react-router-dom";
 
+
 import Spell from "./Spell";
 
 const SpellDetails = ({spells, search, handleSearching}) => {
