@@ -1,13 +1,13 @@
 import React from "react";
 import GameBoard from "./GameBoard";
 import Player from "../components/track_player/Player";
+import DiceRoller from "./DiceRoller";
 
 import {
     Routes,
     Route,
     Link
   } from "react-router-dom";
-import RollDice from "../components/dice_roller/RoleDice";
 const Homepage = () => {
 
 return (
