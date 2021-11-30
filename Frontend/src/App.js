@@ -6,7 +6,6 @@ import {
 import Home from './containers/Homepage';
 import Gameboard from "./containers/GameBoard";
 import Player from "./components/track_player/Player";
-import RollDice from "./components/dice_roller/RoleDice";
 
 function App() {
   return (

@@ -1,6 +1,7 @@
 import React from "react";
 import GameBoard from "./GameBoard";
 import Player from "../components/track_player/Player";
+
 import {
     Routes,
     Route,
@@ -25,7 +26,7 @@ return (
             <Link to="player-tracker" className="mainboxGameText"> Track your Game </Link> </div>
     </div></div>
     <div>
-    <RollDice />
+        <DiceRoller />
     </div>
     
     <Routes>

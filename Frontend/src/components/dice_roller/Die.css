@@ -1,29 +1,147 @@
 .die{
-    margin: 0.5em;
+    margin: 0.15em 0.2em 0 0.35em;
     padding:0em;
-    font-size: 7em;
+    font-size: 3em;
     color:#3d2814;
+    align-self: center;
 
 }
 
-.dice-roll{
-    margin-top: 2em;
-    border: 2px solid #3d2814;
-
+.dice-heading{
+    margin: 0.4em;
+    margin-left: 0.5em;
 }
 
-.dice-roll-wrapper{
-    display: flex;
-    justify-content: center;
+.dice-heading-double{
+    margin: 0.4em;
+    margin-left: 2.3em;
 }
 
-.btn-score-wrapper{
-    display: flex;
-    justify-content: center;
+.dice-heading-quad{
+    margin: 0.4em;
+    margin-left: 5.8em;
 }
 
-#dicebtn {
-    margin: 2em;
+ .dice-box{
+  margin: 2.5em;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  border: 4px solid #3d2814;
+  border-radius: 25%;
+  box-shadow: 0 0 4px 4px #3d2814 inset;
+  box-shadow: 5px 10px 8px 10px #888888;
+  background-color: #cccaca;
+} 
+
+.singleDie{
+    margin-left: 1.5em;
+}
+
+.dice-total-single{
+    margin: 1em;
+}
+
+.dice-total-double{
+    margin-left: 1.2em;
+}
+
+.dice-total-quad{
+    margin-left: 5em;
+}
+ 
+/* add dice buttons below here using ids to create different colour variations for each dice */
+#dicebtn4 {
+    margin: 0.5em;
+    margin-bottom: 0em;
+    margin-left: 2em;
+    font-size: 0.8em;
+    border-radius: 25%;
+    background-color: cadetblue;
+}
+#dicebtn4:hover{
+    background-color: #afabd6;
+    cursor: pointer;
+}
+
+
+#dicebtn6 {
+    margin: 0.5em;
+    margin-left: 2em;
+    font-size: 0.8em;
+    margin-bottom: 0em;
+    border-radius: 25%;
+    background-color: cadetblue;
+}
+#dicebtn6:hover{
+    background-color: #afabd6;
+    cursor: pointer;
+}
+
+
+#dicebtn8 {
+    margin: 0.5em;
+    margin-left: 2.3em;
+    margin-top: 0.8em;
+    font-size: 0.8em;
+    margin-bottom: 0em;
+    border-radius: 25%;
+    background-color: cadetblue
+}
+#dicebtn8:hover{
+    background-color: #afabd6;
+    cursor: pointer;
+}
+
+
+#dicebtn10 {
+    margin: 0.5em;
+    margin-left: 2.3em;
+    margin-top: 0.8em;
+    font-size: 0.8em;
+    margin-bottom: 0em;
+    border-radius: 25%;
+    background-color: cadetblue;
+}
+#dicebtn10:hover{
+    background-color: #afabd6;
+    cursor: pointer;
+}
+
+#dicebtn12 {
+    margin: 0.5em;
+    margin-left: 2.3em;
+    margin-top: 0.8em;
+    font-size: 0.8em;
+    margin-bottom: 0em;
+    border-radius: 25%;
+    background-color: cadetblue;
+}
+#dicebtn12:hover{
+    background-color: #afabd6;
+    cursor: pointer;
+}
+
+#dicebtn20 {
+    margin: 0.5em;
+    margin-left: 7em;
+    margin-top: 0.8em;
+    font-size: 0.8em;
+    margin-bottom: 0em;
+    border-radius: 25%;
+    background-color: cadetblue;
+}
+#dicebtn20:hover{
+    background-color: #afabd6;
+    cursor: pointer;
+}
+
+#dicebtn100 {
+    margin: 0.5em;
+    margin-left: 8em;
+    margin-top: 0.8em;
+    font-size: 0.8em;
+    margin-bottom: 0em;
 }
 
 

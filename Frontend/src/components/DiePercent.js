@@ -1,7 +1,7 @@
 import React from "react";
 import "./Die.css";
 
-const Die = ({face, rolling}) => {
+const DiePercent = ({face, rolling}) => {
 
     return(
         <i className={`die fas fa-dice-${face} ${rolling && "shaking"}`} />
@@ -9,4 +9,4 @@ const Die = ({face, rolling}) => {
 }
 
 
-export default Die;
+export default DiePercent;
