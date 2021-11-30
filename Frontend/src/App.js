@@ -7,7 +7,6 @@ import Home from './containers/Homepage';
 import Gameboard from "./containers/GameBoard";
 
 import Player from "./components/Player";
-import RollDice from "./components/RoleDice";
 
 function App() {
   return (
