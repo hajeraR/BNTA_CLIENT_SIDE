@@ -5,8 +5,8 @@ import {
 } from "react-router-dom";
 import Home from './containers/Homepage';
 import Gameboard from "./containers/GameBoard";
-import Player from "./components/Player";
-import RollDice from "./components/RoleDice";
+import Player from "./components/track_player/Player";
+import RollDice from "./components/dice_roller/RoleDice";
 
 function App() {
   return (

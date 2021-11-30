@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import './Player.css';
-import PlayerDetails from './PlayerDetails';
 import ModalCharacterForm from './ModalCharacterForm';
 import PlayerList from './PlayerList';
 import {

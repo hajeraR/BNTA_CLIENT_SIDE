@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import SpellDetails from '../components/SpellDetails';
+import SpellDetails from '../components/list_of_spells/SpellDetails.js';
 
 const GameBoard = () => {
 
