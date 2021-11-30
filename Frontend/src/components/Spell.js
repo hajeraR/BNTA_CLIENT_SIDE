@@ -1,9 +1,8 @@
-
-
 import React, {useState} from 'react';
 import Modal from './modal/Modal';
 
 const Spell = ({spell}) => {
+    
     const [show, setShow] = useState(false);
 
     function schoolConverter(value) {

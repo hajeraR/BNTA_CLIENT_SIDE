@@ -1,0 +1,148 @@
+/* h1 {
+    display: flex;
+    justify-content: center;
+  } */
+
+.Modal_background{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    z-index: 1000;
+  }
+  
+  .Modal_content{
+    width: 55%;
+    height: 60%;
+    background-color: #E0C0A6;
+    border-radius: 12px;
+    box-shadow: black 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    
+  }
+
+  .form_top{
+    display: flex;
+    /* justify-content: flex-end; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0 5%;
+    height: 16%;
+
+    
+  }
+  
+  .form_top .title{
+    margin-left: 20%;
+    
+  }
+  
+  .form_top button {
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    
+  }
+
+  .modal_mid_section{
+    display: flex;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    padding: auto;
+  }
+  
+  .form{
+    display: table;
+    margin-top: 5%;
+    width: 40%;
+    /* margin-right: 60%; */
+  }
+  
+  .formElement{
+    display: table-row;
+    margin: 1em;
+  }
+  
+  .form label{
+    display: table-cell;
+  }
+
+  .form select{
+      display: table-cell;
+      margin-left: 1em; 
+    margin-bottom: 1.5em;
+    width: 130%;
+  }
+  
+  .form input { 
+    display: table-cell;
+    margin-left: 1em; 
+    margin-bottom: 1.5em;
+    width: 130%;
+  }
+  
+  .filter_spell{
+    /* justify-items: auto; */
+    margin: 2% 6%;
+    width: 55%;
+    overflow-y: scroll;
+    height: 300px;
+
+  }
+  
+  .search{
+    margin-left: 10%;
+    margin-top: 10%;
+  }
+  
+  .search input{
+    width: 380px;
+    height: 40px;
+   
+  }
+  
+  .search ::placeholder{
+    font-size: 130%;
+  }
+  
+  .add_spells{
+    margin: 5%;
+    width: 405px;
+    overflow-y: scroll;
+    height: 250px;
+  }
+  
+  .spell_name{
+    display: flex;
+    justify-content: space-between;
+    line-height: 1em;
+    
+   
+  }
+  
+  .spell_name .add_spell{
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    
+  }
+  
+  .spell_name h4{
+    margin: 2% 6%;
+    
+    
+    /* line-height: 5px; */
+  }

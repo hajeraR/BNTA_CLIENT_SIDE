@@ -1,6 +1,7 @@
 import React from "react";
 import GameBoard from "./GameBoard";
 
+import Player from "../components/Player";
 import {
     Routes,
     Route,
@@ -23,7 +24,7 @@ return (
            <Link to="list-of-spells" className="mainboxSpellsText">View All Spells </Link>
            </div>
         <div className="mainboxGame">
-            <span className="mainboxGameText"> Track your Game </span> </div>
+            <Link to="player-tracker" className="mainboxGameText"> Track your Game </Link> </div>
     </div></div>
     <div>
         <DiceRoller />
@@ -31,6 +32,7 @@ return (
     
     <Routes>
         <Route path="list-of-spells" element={<GameBoard />} />
+        <Route path="player-tracker" element={<Player/>}/>
     </Routes>
     </>
 

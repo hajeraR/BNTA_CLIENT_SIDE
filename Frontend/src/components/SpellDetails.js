@@ -1,15 +1,10 @@
-import { useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-import Homepage from "../containers/Homepage";
-import {
-    Routes,
-    Route,
-    Link
-  } from "react-router-dom";
+import {Link} from "react-router-dom";
 
-import Spell from "./Spell"
+
+import Spell from "./Spell";
 
 const SpellDetails = ({spells, search, handleSearching}) => {
 
@@ -28,7 +23,6 @@ const SpellDetails = ({spells, search, handleSearching}) => {
         <Link to="..">Back to home</Link>
 
         <div className="filtering">
-            <button>Add new spell</button>
         <form>
             <div className="search-icon-container">
             <FontAwesomeIcon  icon={faSearch} className="search-icon"/>
