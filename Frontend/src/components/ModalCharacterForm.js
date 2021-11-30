@@ -4,14 +4,16 @@ import "./ModalCharacterForm.css"
 import RaceList from "./RaceList";
 import ClassList from "./ClassList";
 
-const ModalCharacterForm = ({close, onTaskSubmission}) => {
+const ModalCharacterForm = ({close, onPlayerSubmission}) => {
 
     const [spells, setSpells] = useState([]);
     const [search, setSearch] = useState('');
     const [races, setRace] = useState([]);
+    const [racesIds, setRaceId] = useState(1); 
     const [classes, setClassName] = useState([]);
+    const [classids, setClassId] = useState(1);
     const [name, setName] = useState('');
-    const [level, setLevel] = useState('');
+    const [level, setLevel] = useState();
 
     const getSpellData = () => {
         fetch("http://localhost:8080/api/v1/spells")
@@ -47,43 +49,66 @@ const ModalCharacterForm = ({close, onTaskSubmission}) => {
     const filter = (spells) => {
         return spells.filter((spell) => spell.spellName.toLowerCase().indexOf(search) > -1); 
     }
+    
+    
         
     const handleRaceChange = (event) => {
+
+      setRaceId(event.target.value)
+
+      console.log(event.target.value);
+      
         
-            if(event === 'Dwarf') setRace(1);
-            if(event === 'Halfling') setRace(2);
-            if(event === 'Half-elf') setRace(3);
-            if(event === 'Human') setRace(4);
-            if(event === 'Elf') setRace(5);
-            if(event === 'DragonBorn') setRace(6);
-            if(event === 'Half-Orc') setRace(7);
-            if(event === 'Tiefling') setRace(8);
-            if(event === 'Gnome') setRace(9);
+        //     if(event.target.value === 'Dwarf') return setRaceId(1);
+        //     if(event.target.value === 'Halfling') return setRaceId(2);
+        //     if(event.target.value === 'Half-elf') return setRaceId(3);
+        //     if(event.target.value === 'Human') return setRaceId(4);
+        //     if(event.target.value === 'Elf') return setRaceId(5);
+        //     if(event.target.value === 'DragonBorn') return setRaceId(6);
+        //     if(event.target.value === 'Half-Orc') return setRaceId(7);
+        //     if(event.target.value === 'Tiefling') return setRaceId(8);
+        //     if(event.target.value === 'Gnome') return setRaceId(9);
+
+        // console.log(racesIds)
+       
         
     }
 
+   
+
     const handleClassNameChange = (event) => {
-        if(event === 'Bard') setClassName(1);
-        if(event === 'Cleric') setClassName(2);
-        if(event === 'Druid') setClassName(3);
-        if(event === 'Paladin') setClassName(4);
-        if(event === 'Sorceror') setClassName(5);
-        if(event === 'Warlock') setClassName(6);
-        if(event === 'Wizard') setClassName(7);
-        if(event === 'Ranger') setClassName(8);
+
+        setClassId(event.target.value)
+
+        console.log(event.target.value)
+
+        // if(event.target.value === 'Bard') return setClassId(1);
+        // if(event.target.value === 'Cleric') setClassId(2);
+        // if(event.target.value === 'Druid') setClassId(3);
+        // if(event.target.value === 'Paladin') setClassId(4);
+        // if(event.target.value === 'Sorceror') setClassId(5);
+        // if(event.target.value === 'Warlock') setClassId(6);
+        // if(event.target.value === 'Wizard') setClassId(7);
+        // if(event.target.value === 'Ranger') setClassId(8);
+
+        // console.log(classids);
      
     }
 
     const handleNameChange = (event) => {
         setName(event.target.value);
+        
     }
 
     const handleLevelChange = (event) => {
-        setLevel(event.target.value);
+        setLevel(event.target.value)
+        console.log(event.target.value)
     }
 
 
     const handleFormSubmission = (event) => {
+
+        console.log("submitting form")
         event.preventDefault();
 
 
@@ -91,14 +116,14 @@ const ModalCharacterForm = ({close, onTaskSubmission}) => {
         //assign values to keys
         const newPlayer = {
             name: name,
-            level: level,
-            race: races,
-            class: classes
+            character_level: level,
+            race_id: racesIds,
+            class_id: classids
     
         }
 
         //calling function to update state
-        onTaskSubmission(newPlayer);
+        onPlayerSubmission(newPlayer);
 
         //after submission clear form
         setName("");
@@ -122,7 +147,7 @@ const ModalCharacterForm = ({close, onTaskSubmission}) => {
                 
                 <div className="modal_mid_section">
                     <div className="form">
-                        <form>
+                        <form onSubmit={handleFormSubmission}>
                         <div className="formElement">
                                 <label htmlFor="name">Name: </label>
                                 <input type="text" id="name" placeholder="name" onChange={handleNameChange}/>
@@ -135,6 +160,7 @@ const ModalCharacterForm = ({close, onTaskSubmission}) => {
                                 <label htmlFor="race">Race: </label>
 
                                 <select name="selectList" id="selectList" onChange ={handleRaceChange}>
+                                <option></option>
                                 <RaceList races={races}/>
                                 
                                 </select>
@@ -143,12 +169,13 @@ const ModalCharacterForm = ({close, onTaskSubmission}) => {
                             <div className="formElement">
                                 <label htmlFor="class">Class: </label>
                                 <select name="selectList" id="selectList" onChange ={handleClassNameChange}>
-                                    <ClassList classes={classes}/>
+                                <option></option>
+                                <ClassList classes={classes}/>
                                 </select>
                             </div>
                            
                             <div className="formElement">
-                                <input type="submit" value="SUBMIT" onSubmit={handleFormSubmission}/>
+                                <input type="submit" value="SUBMIT" />
                             </div>
                         </form>
                     </div>

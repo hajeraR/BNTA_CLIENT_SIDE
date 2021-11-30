@@ -1,11 +1,11 @@
-const ClassName = ({classname}) => {
+const ClassName = ({classe}) => {
     
 
     
 
     return(
         
-            <option>{classname.class_name}</option>
+            <option value = {classe.id}>{classe.class_name}</option>
         
     )
 }

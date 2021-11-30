@@ -1,12 +1,16 @@
 const RaceName = ({race}) => {
     
-    
+    // const [racesIds, setRaceId] = useState(); 
+
+    // setRaceId(race.id)
     
 
     return(
         
-            <option>{race.race_name}</option>
-        
+        <>
+           
+            <option value = {race.id}> {race.race_name}</option>
+        </>
     )
 }
 

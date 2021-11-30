@@ -4,9 +4,9 @@ import ClassName from "./ClassName";
 const ClassList = ({classes}) => {
 
     
-    const ClassComponent = classes.map(classname => {
+    const ClassComponent = classes.map(classe => {
         return(
-            <ClassName classname={classname} key={classname.id}/>
+            <ClassName classe={classe} key={classe.id}/>
         )
     })
 
