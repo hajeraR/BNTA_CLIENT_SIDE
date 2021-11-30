@@ -1,11 +1,13 @@
 import React from "react";
 import GameBoard from "./GameBoard";
+
 import {
     Routes,
     Route,
     Link
   } from "react-router-dom";
-import RollDice from "../components/RoleDice";
+import DiceRoller from "./DiceRoller";
+
 const Homepage = () => {
 
 return (
@@ -24,7 +26,7 @@ return (
             <span className="mainboxGameText"> Track your Game </span> </div>
     </div></div>
     <div>
-    <RollDice />
+        <DiceRoller />
     </div>
     
     <Routes>

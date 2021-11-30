@@ -1,0 +1,31 @@
+.all-dice-Wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    margin-top: 2em;
+}
+
+/* .dice-range{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+} */
+
+.tensDice{
+    margin-right: 2em ;
+}
+
+
+.headingSVG{
+    display: flex;
+    flex-direction: row;
+}
+
+.fa-scroll{
+    font-size: 1.2em;
+}
+
