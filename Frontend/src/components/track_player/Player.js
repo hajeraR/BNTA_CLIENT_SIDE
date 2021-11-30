@@ -37,7 +37,9 @@ const Player = () => {
         <>
 
         <Link to="..">Back to home</Link>
-
+        <Link to="../list-of-spells">View all Spells</Link>
+         
+            
         <div> 
         <h1 className="player__title">
             Player Tracker!

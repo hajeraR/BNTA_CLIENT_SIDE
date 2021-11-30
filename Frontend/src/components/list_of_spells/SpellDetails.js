@@ -21,7 +21,7 @@ const SpellDetails = ({spells, search, handleSearching}) => {
         <h2 className="headings">List of Spells</h2>
 
         <Link to="..">Back to home</Link>
-        {/* <Link to="../player-tracker">Track Player</Link> */}
+        <Link to="../player-tracker">Track Player</Link>
 
 
         <div className="filtering">
