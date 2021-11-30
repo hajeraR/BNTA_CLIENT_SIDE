@@ -1,5 +1,5 @@
 {
-  "name": "dndproject",
+  "name": "bnta_client_side",
   "version": "1.0.0",
   "description": "package.json file",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "author": "",
   "license": "ISC",
-  "keywords": []
+  "keywords": [],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",

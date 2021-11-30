@@ -1,16 +1,22 @@
-import Navbar from "./components/Navbar";
-import Player from "./components/Player";
-import GameBoard from "./containers/GameBoard";
-import Homepage from "./containers/Homepage";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Home from './containers/Homepage';
+import Gameboard from "./containers/GameBoard";
+import RollDice from "./components/RoleDice";
 
 function App() {
   return (
-    <>
 
-      {/* <GameBoard /> */}
-      <Player />
+    <BrowserRouter>
+<Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/list-of-spells" element={<Gameboard />} />
+</Routes>
+    </BrowserRouter>
 
-    </>
   );
 }
 

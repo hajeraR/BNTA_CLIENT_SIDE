@@ -232,7 +232,13 @@ h2 {
 
 
 
-@-webkit-keyframes fadeInS {
+
+
+.spell h3 {
+  margin-left: 5%;
+}
+  @-webkit-keyframes fadeInS {
+
   0% {opacity:0;}
   100% {opacity:0.35;}
 }

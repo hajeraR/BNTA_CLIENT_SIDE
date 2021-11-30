@@ -1,0 +1,60 @@
+.die{
+    margin: 0.5em;
+    padding:0em;
+    font-size: 7em;
+    color:#3d2814;
+
+}
+
+.dice-roll{
+    margin-top: 2em;
+    border: 2px solid #3d2814;
+
+}
+
+.dice-roll-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-score-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+#dicebtn {
+    margin: 2em;
+}
+
+
+.shaking {
+    animation-name: shake;
+    animation-duration: 1s;
+}
+
+@keyframes shake {
+    from {
+        transform: translate3d(0,0,0);
+    }
+    15%{
+        transform: translate3d(-25%, 0, 0) rotate3d(0,0,1, -5deg);
+    }
+    30%{
+        transform: translate3d(20%, 0, 0) rotate3d(0,0,1, 3deg);
+    }
+    45%{
+        transform: translate3d(-15%, 0, 0) rotate3d(0,0,1, -3deg);
+    }
+    60%{
+        transform: translate3d(10%, 0, 0) rotate3d(0,0,1, -2deg);
+    }
+    75%{
+        transform: translate3d(-5%, 0, 0) rotate3d(0,0,1, -1deg);
+    }
+
+    to {
+            transform: translate3d(0, 0, 0);
+        
+    }
+    
+}
