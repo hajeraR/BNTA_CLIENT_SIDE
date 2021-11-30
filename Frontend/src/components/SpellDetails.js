@@ -4,8 +4,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 import Homepage from "../containers/Homepage";
 import {
-    Routes,
-    Route,
+   
     Link
   } from "react-router-dom";
 

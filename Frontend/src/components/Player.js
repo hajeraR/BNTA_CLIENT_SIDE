@@ -4,6 +4,10 @@ import './Player.css';
 import PlayerDetails from './PlayerDetails';
 import ModalCharacterForm from './ModalCharacterForm';
 import PlayerList from './PlayerList';
+import {
+   
+    Link
+  } from "react-router-dom";
 
 const Player = () => {
 
@@ -32,6 +36,9 @@ const Player = () => {
 
     return (
         <>
+
+        <Link to="..">Back to home</Link>
+
         <div> 
         <h1 className="player__title">
             Player Tracker!
