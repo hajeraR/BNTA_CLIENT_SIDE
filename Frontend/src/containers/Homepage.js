@@ -25,7 +25,10 @@ return (
         <div className="mainboxGame">
             <Link to="player-tracker" className="mainboxGameText"> Track your Game </Link> </div>
     </div></div>
-    <div>
+    <i class="fab fa-d-and-d"></i>
+    <hr class="rounded" />
+    <div className="dicebanner"> <h5 className="diceHeading"> Online Dice Roller </h5> </div>
+    <div className="diceSection">
         <DiceRoller />
     </div>
     
