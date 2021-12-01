@@ -1,12 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-
 import {Link} from "react-router-dom";
-
 
 import Spell from "./Spell";
 
 const SpellDetails = ({spells, search, handleSearching}) => {
+
+   
 
     const individualSpells = spells
         .map((spell) => {
@@ -16,12 +16,12 @@ const SpellDetails = ({spells, search, handleSearching}) => {
         })
 
 
+            
     return(
         <section className="spells">
-        <h2 className="headings">List of Spells</h2>
+        <h1 className="headings">List of Spells</h1>
 
-        <Link to="..">Back to home</Link>
-        <Link to="../player-tracker">Track Player</Link>
+        {/* <Link to="../player-tracker">Track Player</Link> */}
 
 
         <div className="filtering">
@@ -34,7 +34,6 @@ const SpellDetails = ({spells, search, handleSearching}) => {
         </div>
 
         <div className="spells-container">
-
             <table className="spell-table">
                 <thead>
                     <tr className="table-header">

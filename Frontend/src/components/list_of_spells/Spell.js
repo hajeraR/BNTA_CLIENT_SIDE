@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Modal from './Modal';
+import SpellDetails from './SpellDetails';
 
 const Spell = ({spell}) => {
     
@@ -17,13 +18,12 @@ const Spell = ({spell}) => {
     }
     
     return(
-        <tr onClick={() => {setShow(true)}}>
-            <td>{spell.spellName}</td>
+        <tr className="list-of-spells" onClick={() => {setShow(true)}}>
+            <td className="spell-name">{spell.spellName}</td>
             <td>{schoolConverter(spell.schoolID)}</td>
             <td>{spell.spellLevel}</td>
             <Modal title={spell.spellName} description={spell.description} onClose={() => {setShow(false)}} show={show} />
         </tr>
-   
     )
 }
 

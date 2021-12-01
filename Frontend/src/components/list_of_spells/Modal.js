@@ -23,7 +23,7 @@ const Modal = (props) => {
                     <h3 className="modal-header">{props.title}</h3>
                 </header>
                 <main className="modal-body">
-                    <p>{props.description}</p>
+                    <p className="modal-description--spells">{props.description}</p>
                 </main>
                 <footer className="modal-footer">
                     <button className="modal-close-btn" onClick={props.onClose}>Close</button>

@@ -2,35 +2,39 @@ import React from "react";
 import GameBoard from "./GameBoard";
 import Player from "../components/track_player/Player";
 import DiceRoller from "./DiceRoller";
-
 import {
     Routes,
     Route,
     Link
   } from "react-router-dom";
+
 const Homepage = () => {
 
 return (
 <>
-<span id="bannerPic">
-<div id="homepageBanner">
-</div>
-<h1 className="Mainheading">Welcome to DnD Spellbook</h1>
-</span>
-<div id="wrapper">
-    <div className="MainBoxContainer">
-        <div className="mainboxSpells">
-           <Link to="list-of-spells" className="mainboxSpellsText">View All Spells </Link>
-           </div>
-        <div className="mainboxGame">
-            <Link to="player-tracker" className="mainboxGameText"> Track your Game </Link> </div>
-    </div></div>
-    <i class="fab fa-d-and-d"></i>
-    <hr class="rounded" />
-    <div className="dicebanner"> <h5 className="diceHeading"> Online Dice Roller </h5> </div>
-    <div className="diceSection">
-        <DiceRoller />
+<section className="homepage">
+    <header id="bannerPic">
+        <div id="homepage__banner"></div>
+        <h1 className="main-heading">Welcome to DnD Spellbook</h1>
+    </header>
+
+    <main id="wrapper">
+    <div className="main-box-container">
+        <div className="main-box-spells">
+           <Link to="list-of-spells" className="main-box-spells__text">View All Spells </Link>
+        </div>
+
+        <div className="main-box-game">
+            <Link to="player-tracker" className="main-box-game__text"> Track your Game </Link> 
+        </div>
     </div>
+    </main>
+
+</section>
+    
+    <section className="homepage-dice">
+        <DiceRoller />
+    </section>
     
     <Routes>
         <Route path="list-of-spells" element={<GameBoard />} />
