@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react';
 import SavedSpell from './SavedSpell';
 import SpellList from './SpellList';
+import SpellBookList from './SpellBookList';
 
 
 const SpellBook = (props, {player}) => {
@@ -85,8 +86,8 @@ const SpellBook = (props, {player}) => {
                         <div className="add_spells">
                             <SpellList spells={filter(spells)}/>
                         </div>
-                        <div>
-                            <SavedSpell savedSpells={savedSpells} />
+                        <div >
+                            <SpellBookList savedSpells={savedSpells} />
                             {/* {SpellBookData(player.id)} */}
                             {/* {player.id} */}
                         </div>

@@ -33,6 +33,8 @@ const Player = () => {
         .then(getPlayerData)
     }
 
+    
+
     return (
         <>
 

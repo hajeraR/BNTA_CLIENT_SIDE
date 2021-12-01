@@ -6,6 +6,7 @@ import SpellBook from './SpellBook';
 const PlayerDetails = ({player}) => {
 
   const [show, setShow] = useState(false);
+  
 
     return (
         <>
@@ -24,7 +25,7 @@ const PlayerDetails = ({player}) => {
                 Level: <p>{player.character_level}</p>
               </h5>
               <h5>
-                <p onClick={() => {setShow(true)}}>Spellbook:</p>
+                <p onClick={() => {setShow(true)}} >Spellbook:</p>
                 <SpellBook onClose={() => {setShow(false)}} show={show} player={player}/>
               </h5>
             </div>

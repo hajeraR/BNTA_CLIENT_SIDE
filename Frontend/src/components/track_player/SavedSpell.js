@@ -1,15 +1,15 @@
 
 
-const SavedSpell = ({saved, player}) => {
+const SavedSpell = ({savedSpell}) => {
     
 
     
 
     return(
         
-        <>
-         <p>{saved.spellname}</p>
-        </>
+        <div>
+         <p>{savedSpell.spellname}</p>
+        </div>
     )
 }
 

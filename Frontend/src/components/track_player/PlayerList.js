@@ -1,5 +1,6 @@
 import PlayerDetails from "./PlayerDetails";
-import SavedSpell from "./SavedSpell";
+import SpellBook from "./SpellBook";
+import SpellBookList from "./SpellBookList";
 
 const PlayerList = ({players}) => {
 
@@ -7,7 +8,7 @@ const PlayerList = ({players}) => {
         return(
             <div>
                 <PlayerDetails player={player} key={player.id}/>
-                <SavedSpell player={player} key={player.id}/>
+              
             </div>
             
         )

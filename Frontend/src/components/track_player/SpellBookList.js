@@ -4,17 +4,17 @@ import SavedSpell from './SavedSpell';
 const SpellBookList = ({savedSpells}) => {
 
     
-    const SpellBookComponent = savedSpells.map(saved => {
+    const SpellBookComponent = savedSpells.map(savedSpell => {
         return(
-            <SavedSpell saved={saved} key={saved.id}/>
+            <SavedSpell savedSpell={savedSpell} key={savedSpell.id}/>
         )
     })
 
 
     return(
-        <>
+        <div>
             {SpellBookComponent}
-        </>
+        </div>
         
     )
 
