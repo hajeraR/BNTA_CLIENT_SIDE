@@ -24,10 +24,27 @@ const GameBoard = () => {
     return spells.filter((spell) => spell.spellName.toLowerCase().indexOf(search) > -1); 
 }
 
+const [selected, setSelected] = useState(null);
+
+const selectedSchool = (filter) => {
+  setSelected(filter);
+}
+
+const filteredSpells = () => spells.filter((spell) => {
+    if(!selected) {
+      return(
+        spell.spellName.toLowerCase().indexOf(search) > -1
+        )
+    } else {
+  return (
+    spell.spellName.toLowerCase().indexOf(search) > -1) &&
+    spell.schoolID == selected;
+}});
+
     return (
           <>
           <Navbar />
-          <SpellDetails spells={searching(spells)} search={search} handleSearching={handleSearching} />
+          <SpellDetails selectedSchool={selectedSchool} spells={filteredSpells(spells)} search={search} handleSearching={handleSearching} />
           </>
         );
 
