@@ -3,7 +3,7 @@ import { useState } from 'react';
 import SpellBook from './SpellBook';
 
 
-const PlayerDetails = ({player}) => {
+const PlayerDetails = ({player, getSpellBook}) => {
 
   const [show, setShow] = useState(false);
   
@@ -28,6 +28,7 @@ const PlayerDetails = ({player}) => {
                 <p onClick={() => {setShow(true)}} >Spellbook:</p>
                 <SpellBook onClose={() => {setShow(false)}} show={show} player={player}/>
               </h5>
+              <button onClick={() => getSpellBook(player.id)}>we'll remove this button</button>
             </div>
           </li>
 

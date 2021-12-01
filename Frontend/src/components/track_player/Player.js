@@ -12,7 +12,7 @@ const Player = () => {
 
     const [modalShown, setModalShown] = useState(false);
     const [players, setPlayer] = useState([]);
-    
+    const [savedSpells, setSavedSpells] = useState([]);
 
     const getPlayerData = () => {
         fetch("http://localhost:8080/api/v1/characters")
@@ -33,7 +33,14 @@ const Player = () => {
         .then(getPlayerData)
     }
 
-    
+    const SpellBookData = (id) => {
+
+        fetch(`http://localhost:8080/api/v1/spellbook/${id}`)
+        .then(response => response.json())
+        .then(data => setSavedSpells(data));
+    }
+
+    useEffect(SpellBookData, []);
 
     return (
         <>
@@ -61,7 +68,7 @@ const Player = () => {
                   <ul className="player__items">
                       
                      
-                    <PlayerList players={players}/>
+                    <PlayerList players={players} getSpellBook={SpellBookData}/>
                       
                   </ul>
                 </div>

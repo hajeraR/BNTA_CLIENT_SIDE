@@ -2,12 +2,12 @@ import PlayerDetails from "./PlayerDetails";
 import SpellBook from "./SpellBook";
 import SpellBookList from "./SpellBookList";
 
-const PlayerList = ({players}) => {
+const PlayerList = ({players, getSpellBook}) => {
 
     const playerComponent = players.map(player => {
         return(
             <div>
-                <PlayerDetails player={player} key={player.id}/>
+                <PlayerDetails player={player} key={player.id} getSpellBook={getSpellBook}/>
               
             </div>
             

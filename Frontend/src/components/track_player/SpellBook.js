@@ -43,15 +43,17 @@ const SpellBook = (props, {player}) => {
 
     useEffect(getSpellData, []);
 
+    
 
-    const SpellBookData = (id) => {
 
-        fetch(`http://localhost:8080/api/v1/spellbook/${id}`)
-        .then(response => response.json())
-        .then(data => setSavedSpells(data));
-    }
+    // const SpellBookData = (id) => {
 
-    useEffect(SpellBookData, []);
+    //     fetch(`http://localhost:8080/api/v1/spellbook/${id}`)
+    //     .then(response => response.json())
+    //     .then(data => setSavedSpells(data));
+    // }
+
+    // useEffect(SpellBookData, []);
 
     // const playeriD = player.map(player => {
     //     return (
