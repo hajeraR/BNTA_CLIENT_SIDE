@@ -38,10 +38,14 @@ const Player = () => {
 
         fetch(`http://localhost:8080/api/v1/spellbook/${id}`)
         .then(response => response.json())
-        .then(data => setSavedSpells(data));
+        .then(data => {setSavedSpells(data); console.log(data)})
+        
     }
 
     // useEffect(SpellBookData, []);
+
+    
+
 
     return (
         <>

@@ -1,6 +1,7 @@
 const SpellName = ({spell}) => {
     
 
+   
     
 
     return(
