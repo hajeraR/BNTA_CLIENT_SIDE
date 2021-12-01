@@ -3,10 +3,7 @@ import { useState, useEffect } from 'react';
 import './Player.css';
 import ModalCharacterForm from './ModalCharacterForm';
 import PlayerList from './PlayerList';
-import {
-   
-    Link
-  } from "react-router-dom";
+import Navbar from "../navbar/Navbar";
 
 const Player = () => {
 
@@ -35,42 +32,37 @@ const Player = () => {
 
     return (
         <>
+        <Navbar />
+        <section className="player-tracking">
+        <header> 
+            <h1 className="player__title">Player Tracker!</h1>
+        </header>
 
-        <Link to="..">Back to home</Link>
-        <Link to="../list-of-spells">View all Spells</Link>
-         
-            
-        <div> 
-        <h1 className="player__title">
-            Player Tracker!
-        </h1>
-        </div>
-
-        <div className="player">
-            <h2>List of all players</h2>
+        <main className="player">
 
             <div className="player__button__container">
-                <button className="player__button" onClick={() => {setModalShown(true);}}>Add Player</button>
+                <button className="player__button" onClick={() => {setModalShown(true);}}>
+                    Add Player
+                </button>
                 {modalShown && <ModalCharacterForm close={setModalShown} onPlayerSubmission={addNewPlayer}/>}
             </div>
 
+            <h2>List of all players</h2>
+
+
             <div className="player__container">
                 <div className="player__wrapper">
-                  <ul className="player__items">
-                      
-                     
-                    <PlayerList players={players}/>
-                      
+                  <ul className="player__items">  
+                    <PlayerList players={players}/>     
                   </ul>
                 </div>
-
             </div>
 
-            <div className="player-container-display">
+            <div className="player-container-display"></div>
+        
+        </main>
 
-            </div>
-            
-        </div>
+        </section>
         </>
     )
 }

@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 import SpellDetails from '../components/list_of_spells/SpellDetails.js';
+import Navbar from '../components/navbar/Navbar.js';
 
 const GameBoard = () => {
 
@@ -23,9 +24,9 @@ const GameBoard = () => {
     return spells.filter((spell) => spell.spellName.toLowerCase().indexOf(search) > -1); 
 }
 
-
     return (
           <>
+          <Navbar />
           <SpellDetails spells={searching(spells)} search={search} handleSearching={handleSearching} />
           </>
         );
