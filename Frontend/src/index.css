@@ -276,7 +276,7 @@ td {
 .main-box-spells__text,
 .main-box-game__text {
   text-decoration: none;
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 .dice-title{
@@ -299,6 +299,12 @@ td {
 
 
 /*                Homepage Tablet and Mobile                 */
+
+@media screen and (min-width: 360px )  {
+  .main-box-container{
+    width: 330px;
+  } 
+}
 
 @media screen and (max-width: 475px) {
   .dice-title{
@@ -337,6 +343,7 @@ td {
     border-width: 5em;
     border: 4px solid #3d2814;
     height: 35rem;
+    width: 620px;
     max-width: 550rem;
     background-image: url(../src/Images/ezgif.com-gif-makerQuicker.gif);
     background-size: 100% 100%;
@@ -383,6 +390,11 @@ td {
     height: 40rem;
     width: 70rem;
   }
+  .main-box-game__text, 
+  .main-box-spells__text {
+    font-size: 4rem;
+  }
+
   .dice-title{
     font-size: 0.5em;
     /* border: 4px solid hotpink; */
