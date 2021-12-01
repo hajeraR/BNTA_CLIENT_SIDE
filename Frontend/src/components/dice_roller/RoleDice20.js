@@ -43,7 +43,7 @@ const RollDice20 = ({sides}) => {
 
     return (
         <>
-        <div className="dice-box">
+        <div className="dice-box-quad">
             <div>
                 <h4 className="dice-heading-quad"> 20 Sided: </h4>
             <Die  face={String(die1)} rolling={rolling}/>
