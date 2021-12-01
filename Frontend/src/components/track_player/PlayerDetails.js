@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import SpellBook from './SpellBook';
+import './Player.css';
 
 
 const PlayerDetails = ({player, getSpellBook}) => {
@@ -10,27 +11,40 @@ const PlayerDetails = ({player, getSpellBook}) => {
 
     return (
         <>
-          <li className="player__item">
+          <ul className="player__item">
             <div className="player__details">
-              <h5>
-                Name: {player.name}
-              </h5>
-              <h5>
-                Race: <p>{player.race_id}</p>
-              </h5>
-              <h5>
-                Class: <p>{player.class_id}</p>
-              </h5>
-              <h5>
-                Level: <p>{player.character_level}</p>
-              </h5>
-              <h5>
-                <p onClick={() => {setShow(true)}} >Spellbook:</p>
-                <SpellBook onClose={() => {setShow(false)}} show={show} player={player}/>
-              </h5>
+              <div className="player__details__info">
+                <h5>
+                  Name: {player.name}
+                </h5>
+              </div>
+
+              <div className="player__details__info">
+                <h5>
+                  Race: {player.race_id}
+                </h5>
+              </div>
+
+              <div className="player__details__info">
+                <h5>
+                  Class: {player.class_id}
+                </h5>
+              </div>
+
+              <div className="player__details__info">
+                <h5>
+                  Level: {player.character_level}
+                </h5>
+              </div>
+
+              <div className="player__details__info">
+                  <h5 onClick={() => {setShow(true)}} >Spellbook:</h5>
+                  <SpellBook onClose={() => {setShow(false)}} show={show} player={player}/>
+              </div>
+
               <button onClick={() => getSpellBook(player.id)}>we'll remove this button</button>
             </div>
-          </li>
+          </ul>
 
       </>
     )
