@@ -34,6 +34,8 @@ const SpellDetails = ({ selectedSchool, spells, search, handleSearching}) => {
                 <option value="8">Transmutation</option>
             </select>
 
+            
+
             <div className="search-icon-container">
                 <FontAwesomeIcon  icon={faSearch} className="search-icon"/>
             </div>
