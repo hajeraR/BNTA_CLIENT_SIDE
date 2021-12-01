@@ -33,6 +33,7 @@ return (
 </section>
     
     <section className="homepage-dice">
+        <div className="dice__banner"> <h4 className="dice-heading" > Online Dice Roller </h4> </div>
         <DiceRoller />
     </section>
     

@@ -405,7 +405,7 @@ td {
 /* possibly delete */
 
 
-.dicebanner{
+.dice__banner{
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -418,10 +418,9 @@ td {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   box-shadow: 40px 5px 100px #291402;
-  min-width: 600px;
 }
 
-.diceHeading{
+.dice-heading{
   font-size: 0.5em;
   /* border: 4px solid hotpink; */
   width: 4em;
@@ -429,7 +428,7 @@ td {
   opacity: 70%;
 }
 
-.diceSection{
+.homepage-dice{
   background-color: #a58c65;
 }
 
