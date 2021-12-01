@@ -2,11 +2,17 @@ import React from 'react';
 import { useState } from 'react';
 import SpellBook from './SpellBook';
 import './Player.css';
+import SavedSpell from './SavedSpell';
+import SpellBookModal from './SpellBookModal';
 
 
-const PlayerDetails = ({player, getSpellBook}) => {
+const PlayerDetails = ({player, getSpellBook, savedSpells}) => {
 
   const [show, setShow] = useState(false);
+  const [showSpells, setShowSpells] = useState(false);
+
+
+  
   
 
     return (
@@ -41,8 +47,20 @@ const PlayerDetails = ({player, getSpellBook}) => {
                   <h5 onClick={() => {setShow(true)}} >Spellbook:</h5>
                   <SpellBook onClose={() => {setShow(false)}} show={show} player={player}/>
               </div>
+              
+              {/* <div>
+              
+                  <SpellBookModal onClose={() => {setShowSpells(false)}} showSpells={showSpells} player={player} savedSpells={savedSpells}/>
+                <button onClick={() => {getSpellBook(player.id); setShow(true)}}>we'll remove this button</button>
+              </div> */}
+              
 
-              <button onClick={() => getSpellBook(player.id)}>we'll remove this button</button>
+              <div >
+                <button  onClick={() => {setShowSpells(true); getSpellBook(player.id)}} value={savedSpells.spellname}>Add Player</button>
+                {showSpells && <SpellBookModal close={setShowSpells} player={player} savedSpells={savedSpells}/>}
+                {savedSpells.spellname}
+            </div>
+
             </div>
           </ul>
 

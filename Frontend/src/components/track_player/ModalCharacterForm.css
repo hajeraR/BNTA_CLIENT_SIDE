@@ -142,7 +142,13 @@
   
   .spell_name h4{
     margin: 2% 6%;
-    
-    
-    /* line-height: 5px; */
   }
+    
+/*     
+ .spellbook_modal{
+  background-color: pink;
+  position: fixed;
+  height: 200px;
+  width: 100px;
+ 
+  } */

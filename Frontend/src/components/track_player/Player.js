@@ -41,7 +41,7 @@ const Player = () => {
         .then(data => setSavedSpells(data));
     }
 
-    useEffect(SpellBookData, []);
+    // useEffect(SpellBookData, []);
 
     return (
         <>
@@ -68,7 +68,7 @@ const Player = () => {
                   <ul className="player__items">
                       
                      
-                    <PlayerList players={players} getSpellBook={SpellBookData}/>
+                    <PlayerList players={players} savedSpells={savedSpells} getSpellBook={SpellBookData}/>
                       
                   </ul>
                 </div>

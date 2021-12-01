@@ -4,11 +4,11 @@ import SpellList from './SpellList';
 import SpellBookList from './SpellBookList';
 
 
-const SpellBook = (props, {player}) => {
+const SpellBook = (props) => {
 
     const [search, setSearch] = useState('');
     const [spells, setSpells] = useState([]);
-    const [savedSpells, setSavedSpells] = useState([]);
+
 
     // useEffect(savedSpells, []);
 
@@ -43,40 +43,9 @@ const SpellBook = (props, {player}) => {
 
     useEffect(getSpellData, []);
 
-    
 
 
-    // const SpellBookData = (id) => {
 
-    //     fetch(`http://localhost:8080/api/v1/spellbook/${id}`)
-    //     .then(response => response.json())
-    //     .then(data => setSavedSpells(data));
-    // }
-
-    // useEffect(SpellBookData, []);
-
-    // const playeriD = player.map(player => {
-    //     return (
-    //         <div>
-    //             player={player} 
-    //         </div>
-            
-    //     )
-    // })
-
-    // const handleSaveSpell = (id) => {
-
-    //     fetch(`http://localhost:8080/api/v1/spells/${id}`, {
-    //         method: 'PUT',
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify(taskToUpdate)
-    //     })
-    //         .then(getSpellData);
-    // }
-
-    // }
 
     return(
         <div className={`modal-container ${props.show ? "show" : ""}`} onClick={props.onClose}>
@@ -88,12 +57,9 @@ const SpellBook = (props, {player}) => {
                         <div className="add_spells">
                             <SpellList spells={filter(spells)}/>
                         </div>
-                        <div >
-                            <SpellBookList savedSpells={savedSpells} />
-                            {/* {SpellBookData(player.id)} */}
-                            {/* {player.id} */}
-                        </div>
+                        
                     </div>
+                   
             </section>
         </div>
     )
