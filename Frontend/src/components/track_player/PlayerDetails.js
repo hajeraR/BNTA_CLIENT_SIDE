@@ -6,19 +6,23 @@ import SavedSpell from './SavedSpell';
 import SpellBookModal from './SpellBookModal';
 
 
-const PlayerDetails = ({player, getSpellBook, savedSpells}) => {
+const PlayerDetails = ({player, getSpellBook, savedSpells, deletePlayer}) => {
 
   const [show, setShow] = useState(false);
   const [showSpells, setShowSpells] = useState(false);
+  const [alive, setAlive] = useState("alive");
 
 
-  
-  
+  const changeText = (text) => setAlive(text);
+
 
     return (
         <>
           <ul className="player__item">
             <div className="player__details">
+              <div>
+                <button className="delete_player" onClick={() => changeText("dead")}> {alive}</button>
+              </div>
               <div className="player__details__info">
                 <h5>
                   Name: {player.name}

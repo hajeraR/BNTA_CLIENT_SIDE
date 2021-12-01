@@ -44,7 +44,16 @@ const SpellBook = (props) => {
     useEffect(getSpellData, []);
 
 
-
+    // const postToBook = (newSpell) => {
+    //     fetch("http://localhost:8080/api/v1/spellbook", {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(newSpell)
+    //     })
+    //     .then(SpellBookData)
+    // }
 
 
     return(
@@ -55,7 +64,7 @@ const SpellBook = (props) => {
                             <input type="search" placeholder="search spells" onChange={handleSearchChange} value={search}/>
                         </div>
                         <div className="add_spells">
-                            <SpellList spells={filter(spells)}/>
+                            <SpellList spells={filter(spells)} />
                         </div>
                         
                     </div>

@@ -8,6 +8,7 @@ import {
     Link
   } from "react-router-dom";
 import Navbar from '../navbar/Navbar';
+import SpellBook from './SpellBook';
 
 const Player = () => {
 
@@ -43,7 +44,17 @@ const Player = () => {
     }
 
     // useEffect(SpellBookData, []);
-
+    
+    const deletePlayer = (id) => {
+        fetch(`http://localhost:8080/api/v1/characters/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            // body: JSON.stringify(newPlayer)
+        })
+        .then(getPlayerData)
+    }
     
 
 
@@ -72,7 +83,7 @@ const Player = () => {
                   <ul className="player__items">
                       
                      
-                    <PlayerList players={players} savedSpells={savedSpells} getSpellBook={SpellBookData}/>
+                    <PlayerList players={players} savedSpells={savedSpells} getSpellBook={SpellBookData} deletePlayer={deletePlayer}/>
                       
                   </ul>
                 </div>

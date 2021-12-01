@@ -1,7 +1,27 @@
 const SpellName = ({spell}) => {
     
 
-   
+    // const handleAddSpell = (event) => {
+
+    //     console.log("submitting form")
+    //     event.preventDefault();
+
+
+
+    //     //assign values to keys
+    //     const newSpell = {
+    //         characterID: ,
+    //         spellID: spell.id,
+    //         spellIsKnown: true
+    
+    //     }
+
+    //     //calling function to update state
+    //     UpdateSpellBook(newSpell);
+
+
+
+    // }
     
 
     return(
