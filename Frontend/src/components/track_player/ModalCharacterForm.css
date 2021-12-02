@@ -3,6 +3,8 @@
     justify-content: center;
   } */
 
+  @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
 .Modal_background{
     top: 0;
     left: 0;
@@ -16,9 +18,13 @@
     margin: 0;
     z-index: 1000;
   }
+
+  .filter_spells {
+    text-align: center;
+  }
   
   .Modal_content{
-    width: 55%;
+    width: 30%;
     height: 60%;
     background-color: #E0C0A6;
     border-radius: 12px;
@@ -26,25 +32,40 @@
     display: flex;
     flex-direction: column;
     padding: 25px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    transition: width 0.5s ease 0.5s, 
+              height 0.5s ease;
     
+  }
+
+  label {
+    font-family: 'MedievalSharp', cursive;
+  }
+
+  .form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .form_top{
     display: flex;
     /* justify-content: flex-end; */
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     padding: 0;
     margin: 0 5%;
     height: 16%;
+    font-family: 'MedievalSharp', cursive;
 
     
   }
   
-  .form_top .title{
-    margin-left: 20%;
-    
-  }
   
   .form_top button {
     background-color: transparent;
@@ -56,11 +77,42 @@
 
   .modal_mid_section{
     display: flex;
-    /* justify-content: space-between; */
-    /* align-items: center; */
-    padding: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    display: table;
+    height: 100%;
   }
+
   
+  .formElement {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .formElement__name {
+    padding-bottom: 1em;
+  }
+
+  .formElement__level {
+    padding-bottom: 1em;
+  }
+
+  .formElement__race {
+    padding-bottom: 1em;
+  }
+
+  .formElement__submit__button {
+    display: flex;
+    justify-content: center;
+    padding: 1.3em;
+  }
+
+  .selectList__placeholder {
+    color: gray;
+  }
+
   .form{
     display: table;
     margin-top: 5%;
@@ -68,10 +120,6 @@
     /* margin-right: 60%; */
   }
   
-  .formElement{
-    display: table-row;
-    margin: 1em;
-  }
   
   .form label{
     display: table-cell;
@@ -152,3 +200,117 @@
   width: 100px;
  
   } */
+
+  /* spellbook modal */
+
+.player__details__spellbook{
+    font-family: 'MedievalSharp', cursive;
+    width: auto;
+    border: none;
+    outline: none;
+    color: black; 
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.player__details__spellbook:before {
+  content: '';
+  background: linear-gradient(120deg, #a8e063, #a8e063, #56ab2f, #a8e063, #a8e063, #a8e063);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.player__details__spellbook:active {
+  color: white;
+}
+
+.player__details__spellbook:active:after {
+  background: transparent;
+}
+
+.player__details__spellbook:hover:before {
+  opacity: 1;
+}
+
+.player__details__spellbook:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+.modal-content {
+    width: 34%;
+    border-radius: 1em;
+    background-color: #E0C0A6;
+    text-align: center;
+    box-shadow: black 0px 5px 15px;
+  }
+
+
+  .modal-searchbox{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom:1em;
+    padding-top:2em;
+  }
+  
+  .modal__search {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    padding:0.3em ;
+  }
+
+  /* player spells modal */
+
+  .player__spells__modal {
+    width:30%;
+    height:auto;
+    border-radius: 1em;
+    background-color: #E0C0A6;
+    text-align: center;
+    box-shadow: black 0px 5px 15px;
+  }
+
+  .player__individual__spells{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em;
+    
+    
+  }
+
+  .each__spell {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    font-family: 'MedievalSharp', cursive;
+  }

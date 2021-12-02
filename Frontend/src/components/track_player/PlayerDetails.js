@@ -20,8 +20,8 @@ const PlayerDetails = ({player, getSpellBook, savedSpells, deletePlayer}) => {
         <>
           <ul className="player__item">
             <div className="player__details">
-              <div>
-                <button className="delete_player" onClick={() => changeText("dead")}> {alive}</button>
+              <div className="player__delete__button">
+                <button className="delete__player" onClick={() => changeText("dead")}> {alive}</button>
               </div>
               <div className="player__details__info">
                 <h5>
@@ -48,7 +48,7 @@ const PlayerDetails = ({player, getSpellBook, savedSpells, deletePlayer}) => {
               </div>
 
               <div className="player__details__info">
-                  <h5 onClick={() => {setShow(true)}} >Spellbook:</h5>
+                  <h5 className="player__details__spellbook" onClick={() => {setShow(true)}} >Spellbook</h5>
                   <SpellBook onClose={() => {setShow(false)}} show={show} player={player}/>
               </div>
               
@@ -59,8 +59,8 @@ const PlayerDetails = ({player, getSpellBook, savedSpells, deletePlayer}) => {
               </div> */}
               
 
-              <div >
-                <button  onClick={() => {setShowSpells(true); getSpellBook(player.id)}} value={savedSpells.spellname}>Add Player</button>
+              <div className="player__spells__button__container">
+                <button className="player__spells__button" onClick={() => {setShowSpells(true); getSpellBook(player.id)}} value={savedSpells.spellname}>Player Spells</button>
                 {showSpells && <SpellBookModal close={setShowSpells} player={player} savedSpells={savedSpells}/>}
                 {savedSpells.spellname}
             </div>

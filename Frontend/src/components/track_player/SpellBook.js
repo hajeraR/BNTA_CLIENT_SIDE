@@ -59,16 +59,21 @@ const SpellBook = (props) => {
     return(
         <div className={`modal-container ${props.show ? "show" : ""}`} onClick={props.onClose}>
             <section className="modal-content" onClick={e => e.stopPropagation()}>
-            <div className="filter_spells">
-                        <div className="search">
-                            <input type="search" placeholder="search spells" onChange={handleSearchChange} value={search}/>
+         
+                    <div>
+                        <div className="modal-searchbox">
+                            <input className="modal__search" type="search" placeholder="search spells" onChange={handleSearchChange} value={search}/>
                         </div>
+                    </div>
+
+                    <div>
                         <div className="add_spells">
                             <SpellList spells={filter(spells)} />
                         </div>
-                        
                     </div>
-                   
+
+        
+                                          
             </section>
         </div>
     )

@@ -1,11 +1,19 @@
 
+  @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
 .player__title{
     text-align: left;
+    font-family: 'MedievalSharp', cursive;
 }
 
 .player{
     padding: 1em;
     background:#fff;
+    
+}
+
+.player__list__title {
+    font-family: 'MedievalSharp', cursive;
 }
 
 .player__container {
@@ -44,6 +52,7 @@
     color:#fff;
     font-size: 12px;
     cursor: pointer;
+    font-family: 'MedievalSharp', cursive;
 }
 
 .player__title {
@@ -51,7 +60,117 @@
     justify-content: center;
 }
 
+.player__details__info {
+    font-family: 'MedievalSharp', cursive;
+}
+
+.delete__player {
+    font-family: 'MedievalSharp', cursive;
+}
+
+.player__spells__button{
+    font-family: 'MedievalSharp', cursive;
+    width: 130px;
+    border: none;
+    outline: none;
+    color: black; 
+    
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.player__spells__button:before {
+    content: '';
+    background: linear-gradient(120deg, #f7bb97, #f7bb97, #dd5e89 , #dd5e89 , #f7bb97, #f7bb97 );
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.player__spells__button:active {
+    color: white;
+}
+
+.player__spells__button:active:after {
+    background: transparent;
+}
+
+.player__spells__button:hover:before {
+    opacity: 1;
+}
+
+.player__spells__button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+/* .player__spells__button:hover {
+    font-family: 'MedievalSharp', cursive;
+    width: 130px;
+    padding: 0.3em;
+    border: 2px solid green;
+    color: black;
+    background: none;
+    cursor: pointer;
+    border-radius: 50px;
+} */
+
+.player__details__spellbook {
+    font-weight: 100;
+}
+
+.player__delete__button {
+    display: flex;
+    align-items: center;
+}
+
+.player__spells__button__container {
+    display: flex;
+    align-items: center;
+}
+
 h3 {
     text-align: center;
 }
 
+button {
+
+/* CSS */
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+
+
+}
+  
+
+  

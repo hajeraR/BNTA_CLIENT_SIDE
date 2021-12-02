@@ -7,7 +7,12 @@ const SpellBookList = ({savedSpells}) => {
     const SpellBookComponent = savedSpells.map(savedSpell => {
         return(
             // <SavedSpell savedSpell={savedSpell} key={savedSpell.id}/>
-            <li>{savedSpell.spellName}</li>
+
+                <div>
+                    <ul className="each__spell">{savedSpell.spellName}</ul>
+                </div>
+                    
+
         )
     })
 

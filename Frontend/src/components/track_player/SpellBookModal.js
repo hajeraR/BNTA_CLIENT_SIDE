@@ -11,13 +11,18 @@ const SpellBookModal = ({close, player, savedSpells}) => {
     
 
     return(
-        <div onClick={() => close(false)} className="spellbook_modal">
-            <SpellBookList savedSpells={savedSpells}/>
-            {/* <p>{savedSpells[0].spellName}</p> */}
-           
-        </div>
+        
+        <div className={`modal-container ${close ? "show" : ""}`} onClick={() => close(false)}>
+            <section className="player__spells__modal">
+        
+                    <div className="player__individual__spells">
+                        <SpellBookList savedSpells={savedSpells}/>
+                    </div>
+             
+            </section>
+    </div>
     )
-    
+
 
 }
 

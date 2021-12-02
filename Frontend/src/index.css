@@ -317,6 +317,21 @@ h2 {
   
 }
 
+.player__spells {
+  display: table;
+  margin-top: 5%;
+  width: 40%;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 0.8em;
+}
+
+.modal_content{
+  
+}
+
+
+
 
 /* media query to manage the responsive design for smaller screen size */
 

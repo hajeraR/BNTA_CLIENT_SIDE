@@ -65,7 +65,7 @@ const Player = () => {
             
         <div> 
         <h1 className="player__title">
-            Player Tracker!
+            Player Tracker 
         </h1>
         </div>
 
@@ -76,7 +76,10 @@ const Player = () => {
                 {modalShown && <ModalCharacterForm close={setModalShown} onPlayerSubmission={addNewPlayer}/>}
             </div>
 
-            <h3>List of all current players</h3>
+            <div className="player__list__title">
+                <h3>List of all current players</h3>
+            </div>
+            
 
             <div className="player__container">
                 <div className="player__wrapper">

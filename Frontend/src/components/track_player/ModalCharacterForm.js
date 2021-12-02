@@ -116,51 +116,64 @@ const ModalCharacterForm = ({close, onPlayerSubmission}) => {
     return(
         <div className="Modal_background">
             <div className="Modal_content">
-                <div className="form_top">
-                    <div className="title">
-                        <h1>Add New Player</h1>
-                    </div>
-                    <button onClick={() => close(false)}> X </button>
-                </div>
-                
-                <div className="modal_mid_section">
-                    <div className="form">
-                        <form onSubmit={handleFormSubmission}>
-                        <div className="formElement">
-                                <label htmlFor="name">Name: </label>
-                                <input type="text" id="name" placeholder="name" onChange={handleNameChange}/>
-                            </div>
-                            <div className="formElement">
-                                <label htmlFor="Level">Level: </label>
-                                <input type="text" id="level" placeholder="level" onChange={handleLevelChange}/>
-                            </div>
-                            <div className="formElement">
-                                <label htmlFor="race">Race: </label>
 
-                                <select name="selectList" id="selectList" onChange ={handleRaceChange}>
-                                <option></option>
-                                <RaceList races={races}/>
-                                
-                                </select>
-                                    
-                            </div>
+                    <div className="form_top">
+                        <h2>Add New Player</h2>
+                        <button onClick={() => close(false)}> X </button>
+                    </div>
+
+
+                        <form className="modal_mid_section" onSubmit={handleFormSubmission}>
                             <div className="formElement">
-                                <label htmlFor="class">Class: </label>
-                                <select name="selectList" id="selectList" onChange ={handleClassNameChange}>
-                                <option></option>
-                                <ClassList classes={classes}/>
-                                </select>
+                                <div>
+                                    <label htmlFor="name">Name: </label>
+                                </div>
+                                <div className="formElement__name">
+                                    <input type="text" id="name" placeholder="character name" onChange={handleNameChange}/>
+                                </div>
+                            </div>
+
+                            <div className="formElement">
+                                <div>
+                                    <label htmlFor="Level">Level: </label>
+                                </div>
+                                <div className="formElement__level">
+                                    <input type="text" id="level" placeholder="character level" onChange={handleLevelChange}/>
+                                </div>
+                            </div>
+
+                            <div className="formElement">
+                                <div>
+                                    <label htmlFor="race">Race: </label>
+                                </div>
+                                <div className="formElement__race" >
+                                    <select className="selectList__placeholder" name="selectList" id="selectList" onChange ={handleRaceChange}>
+                                    <option>Select your race</option>
+                                    <RaceList races={races}/>
+                                </select>   
+                                </div>
+                            </div>
+
+                            <div className="formElement">
+                                <div>
+                                    <label htmlFor="class">Class: </label>
+                                </div>
+                                <div>
+                                    <select className="selectList__placeholder" name="selectList" id="selectList" onChange ={handleClassNameChange}>
+                                    <option>Select your class</option>
+                                    <ClassList classes={classes}/>
+                                    </select>
+                                </div>
                             </div>
                            
                             <div className="formElement">
+                                <div className="formElement__submit__button">
                                 <input type="submit" value="SUBMIT" />
+                                </div>
                             </div>
+
                         </form>
-                    </div>
-                   
-                    
-                    
-                </div>
+            
                 
                
             </div>
