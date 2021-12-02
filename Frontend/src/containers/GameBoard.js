@@ -4,6 +4,8 @@ import Navbar from '../components/navbar/Navbar.js';
 
 const GameBoard = () => {
 
+ 
+
   const [spells, setSpells] = useState([]);
 
   const getSpellData = () => {
@@ -26,7 +28,9 @@ const GameBoard = () => {
 
     return (
           <>
+
           <Navbar />
+
           <SpellDetails spells={searching(spells)} search={search} handleSearching={handleSearching} />
           </>
         );

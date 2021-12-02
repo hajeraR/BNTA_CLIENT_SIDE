@@ -10,23 +10,39 @@ import {
 
 const Homepage = () => {
 
-return (
-<>
-<section className="homepage">
-    <header id="bannerPic">
-        <div id="homepage__banner"></div>
-        <h1 className="main-heading">Welcome to DnD Spellbook</h1>
-    </header>
+    const changeColour = () => {
 
-    <main id="wrapper">
+        const darkmode = document.querySelector('.darkmode')
+        const mainHeading = document.querySelector('.main-heading')
+        darkmode.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme')
+            mainHeading.classList.toggle('light-theme')
+            
+        })
+
+
+    }
+
+return (
+<section className="homepage">
+
+<button className="darkmode" onClick={()=>{changeColour()}}>light/dark</button>
+<span id="bannerPic">
+<div id="homepage__banner">
+</div>
+<h1 className="main-heading">Welcome to DnD Spellbook</h1>
+</span>
+<div id="wrapper">
     <div className="main-box-container">
         <div className="main-box-spells">
            <Link to="list-of-spells" className="main-box-spells__text">View All Spells </Link>
-        </div>
-
+           </div>
         <div className="main-box-game">
-            <Link to="player-tracker" className="main-box-game__text"> Track your Game </Link> 
-        </div>
+            <Link to="player-tracker" className="main-box-game__text"> Track your Game </Link> </div>
+    </div></div>
+    <div>
+        <DiceRoller />
+
     </div>
     </main>
 

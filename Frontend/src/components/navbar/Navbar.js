@@ -1,3 +1,6 @@
+
+import React, {useState} from 'react';
+
 import './Navbar.css';
 import {Link} from "react-router-dom";
 
@@ -6,8 +9,12 @@ const Navbar = () => {
         <>
           <nav className="navbar">
             <div className="navbar-container">
-                <Link className="navbar-logo" to="..">Hearthstone</Link>
+
+              <Link className="navbar-logo" to="..">HearthstoNe</Link> 
+              <Link className="navbar-logo"to="../list-of-spells">Spells</Link>
             </div>
+
+
           </nav>
         </>
     )

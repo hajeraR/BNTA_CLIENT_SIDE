@@ -7,13 +7,17 @@
 }
 
 .navbar-logo{
+
     padding: 1rem;
+
     text-decoration: none;
     color: white;
 }
 
 .navbar-right{
     display: flex;
+
     gap: 1rem;
     margin-right: 1rem;
+
 }

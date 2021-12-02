@@ -29,10 +29,24 @@ body {
   font-size: 2.4rem;
 }
 
+body.light-theme{
+  background-color: black;
+}
+
 .headings {
   font-size: 3rem;
   color: var(--headings);
 }
+
+
+.headings.light-theme{
+  color: brown;
+}
+
+.main-heading.light-theme{
+  color: brown;
+}
+
 
 /*                Spells Section                */
 /* Container */
@@ -42,6 +56,11 @@ body {
   align-items: center;
   width: 100vw;
   background: var(--background);
+}
+
+.spells.light-theme{
+  background: black;
+  color: white;
 }
 
 /* Search Bar Related */
@@ -505,9 +524,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
   text-decoration: underline;
 }
 
+
+.player__spells {
+  display: table;
+  margin-top: 5%;
+  width: 40%;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 0.8em;
+}
+
+.darkmode{
+  font-family: 'MedievalSharp', cursive;
+  color: white;
+  background-color: brown;
+}
+
+
+
 .main-box-game__text:visited{
   color: #fff;
 }
+
 
 .fab{
   margin-top: 6rem;

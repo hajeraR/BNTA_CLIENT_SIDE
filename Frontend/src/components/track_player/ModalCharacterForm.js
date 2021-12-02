@@ -6,8 +6,8 @@ import ClassList from "./ClassList";
 
 const ModalCharacterForm = ({close, onPlayerSubmission}) => {
 
-    const [spells, setSpells] = useState([]);
-    const [search, setSearch] = useState('');
+    
+    
     const [races, setRace] = useState([]);
     const [racesIds, setRaceId] = useState(1); 
     const [classes, setClassName] = useState([]);
@@ -15,14 +15,7 @@ const ModalCharacterForm = ({close, onPlayerSubmission}) => {
     const [name, setName] = useState('');
     const [level, setLevel] = useState();
 
-    const getSpellData = () => {
-        fetch("http://localhost:8080/api/v1/spells")
-        .then((response) => response.json())
-        .then(data => setSpells(data));
-    
-    }
-
-    useEffect(getSpellData, []);
+  
 
     const getRaceData = () => {
         fetch("http://localhost:8080/api/v1/races")
@@ -42,13 +35,7 @@ const ModalCharacterForm = ({close, onPlayerSubmission}) => {
     
 
 
-    const handleSearchChange = (event) => {
-        setSearch(event.target.value);
-    }
-
-    const filter = (spells) => {
-        return spells.filter((spell) => spell.spellName.toLowerCase().indexOf(search) > -1); 
-    }
+    
     
     
         
@@ -58,19 +45,6 @@ const ModalCharacterForm = ({close, onPlayerSubmission}) => {
 
       console.log(event.target.value);
       
-        
-        //     if(event.target.value === 'Dwarf') return setRaceId(1);
-        //     if(event.target.value === 'Halfling') return setRaceId(2);
-        //     if(event.target.value === 'Half-elf') return setRaceId(3);
-        //     if(event.target.value === 'Human') return setRaceId(4);
-        //     if(event.target.value === 'Elf') return setRaceId(5);
-        //     if(event.target.value === 'DragonBorn') return setRaceId(6);
-        //     if(event.target.value === 'Half-Orc') return setRaceId(7);
-        //     if(event.target.value === 'Tiefling') return setRaceId(8);
-        //     if(event.target.value === 'Gnome') return setRaceId(9);
-
-        // console.log(racesIds)
-       
         
     }
 
@@ -82,17 +56,6 @@ const ModalCharacterForm = ({close, onPlayerSubmission}) => {
 
         console.log(event.target.value)
 
-        // if(event.target.value === 'Bard') return setClassId(1);
-        // if(event.target.value === 'Cleric') setClassId(2);
-        // if(event.target.value === 'Druid') setClassId(3);
-        // if(event.target.value === 'Paladin') setClassId(4);
-        // if(event.target.value === 'Sorceror') setClassId(5);
-        // if(event.target.value === 'Warlock') setClassId(6);
-        // if(event.target.value === 'Wizard') setClassId(7);
-        // if(event.target.value === 'Ranger') setClassId(8);
-
-        // console.log(classids);
-     
     }
 
     const handleNameChange = (event) => {
@@ -134,62 +97,76 @@ const ModalCharacterForm = ({close, onPlayerSubmission}) => {
 
     }
     
+    // const spellValidation = () => {
+
+    //     if (level < spells.level){
+    //         return (
+    //             <div>stop</div>
+    //         )
+    //     }
+    // }
 
     return(
         <div className="Modal_background">
             <div className="Modal_content">
-                <div className="form_top">
-                    <div className="title">
-                        <h1>Add New Player</h1>
-                    </div>
-                    <button onClick={() => close(false)}> X </button>
-                </div>
-                
-                <div className="modal_mid_section">
-                    <div className="form">
-                        <form onSubmit={handleFormSubmission}>
-                        <div className="formElement">
-                                <label htmlFor="name">Name: </label>
-                                <input type="text" id="name" placeholder="name" onChange={handleNameChange}/>
-                            </div>
-                            <div className="formElement">
-                                <label htmlFor="Level">Level: </label>
-                                <input type="text" id="level" placeholder="level" onChange={handleLevelChange}/>
-                            </div>
-                            <div className="formElement">
-                                <label htmlFor="race">Race: </label>
 
-                                <select name="selectList" id="selectList" onChange ={handleRaceChange}>
-                                <option></option>
-                                <RaceList races={races}/>
-                                
-                                </select>
-                                    
-                            </div>
+                    <div className="form_top">
+                        <h2>Add New Player</h2>
+                        <button onClick={() => close(false)}> X </button>
+                    </div>
+
+
+                        <form className="modal_mid_section" onSubmit={handleFormSubmission}>
                             <div className="formElement">
-                                <label htmlFor="class">Class: </label>
-                                <select name="selectList" id="selectList" onChange ={handleClassNameChange}>
-                                <option></option>
-                                <ClassList classes={classes}/>
-                                </select>
+                                <div>
+                                    <label htmlFor="name">Name: </label>
+                                </div>
+                                <div className="formElement__name">
+                                    <input type="text" id="name" placeholder="character name" onChange={handleNameChange}/>
+                                </div>
+                            </div>
+
+                            <div className="formElement">
+                                <div>
+                                    <label htmlFor="Level">Level: </label>
+                                </div>
+                                <div className="formElement__level">
+                                    <input type="text" id="level" placeholder="character level" onChange={handleLevelChange}/>
+                                </div>
+                            </div>
+
+                            <div className="formElement">
+                                <div>
+                                    <label htmlFor="race">Race: </label>
+                                </div>
+                                <div className="formElement__race" >
+                                    <select className="selectList__placeholder" name="selectList" id="selectList" onChange ={handleRaceChange}>
+                                    <option>Select your race</option>
+                                    <RaceList races={races}/>
+                                </select>   
+                                </div>
+                            </div>
+
+                            <div className="formElement">
+                                <div>
+                                    <label htmlFor="class">Class: </label>
+                                </div>
+                                <div>
+                                    <select className="selectList__placeholder" name="selectList" id="selectList" onChange ={handleClassNameChange}>
+                                    <option>Select your class</option>
+                                    <ClassList classes={classes}/>
+                                    </select>
+                                </div>
                             </div>
                            
                             <div className="formElement">
+                                <div className="formElement__submit__button">
                                 <input type="submit" value="SUBMIT" />
+                                </div>
                             </div>
+
                         </form>
-                    </div>
-                    <div className="filter_spells">
-                        <div className="search">
-                            <input type="search" placeholder="search spells" onChange={handleSearchChange} value={search}/>
-                        </div>
-                        <div className="add_spells">
-                            <SpellList spells={filter(spells)}/>
-                        </div>
-                    </div>
-                    
-                    
-                </div>
+            
                 
                
             </div>
