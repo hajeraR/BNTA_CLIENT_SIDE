@@ -79,8 +79,15 @@ const SpellDetails = ({ canWizard, canWarlock, canSorcerer, canRanger, canPaladi
             </li>
         </ul>
         </div>
+
         <div className="filtering">
-        <form>
+
+        <form className="search-bar-container">
+                <div className="search-icon-container">
+                    <FontAwesomeIcon  icon={faSearch} className="search-icon"/>
+                </div>
+                <input placeholder="Search Spell Name" className="search-bar" type="text" search={search} onChange={handleSearching} />
+            </form>
 
             <select onChange={(e) => {selectedSchool(e.target.value)}}>
                 <option value="">Select a School</option>
@@ -94,13 +101,6 @@ const SpellDetails = ({ canWizard, canWarlock, canSorcerer, canRanger, canPaladi
                 <option value="8">Transmutation</option>
             </select>
 
-
-            
-            <div className="search-icon-container">
-                <FontAwesomeIcon  icon={faSearch} className="search-icon"/>
-            </div>
-            <input placeholder="Search" className="search-bar" type="text" search={search} onChange={handleSearching} />
-          </form>
         </div>
 
         <div className="spells-container">
