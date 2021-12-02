@@ -6,7 +6,7 @@ import SavedSpell from './SavedSpell';
 import SpellBookModal from './SpellBookModal';
 
 
-const PlayerDetails = ({player, getSpellBook, savedSpells, deletePlayer}) => {
+const PlayerDetails = ({player, getSpellBook, savedSpells, deletePlayer, UpdateSpellBook}) => {
 
   const [show, setShow] = useState(false);
   const [showSpells, setShowSpells] = useState(false);
@@ -14,6 +14,8 @@ const PlayerDetails = ({player, getSpellBook, savedSpells, deletePlayer}) => {
 
 
   const changeText = (text) => setAlive(text);
+
+  
 
 
     return (
@@ -49,7 +51,7 @@ const PlayerDetails = ({player, getSpellBook, savedSpells, deletePlayer}) => {
 
               <div className="player__details__info">
                   <h5 onClick={() => {setShow(true)}} >Spellbook:</h5>
-                  <SpellBook onClose={() => {setShow(false)}} show={show} player={player}/>
+                  <SpellBook onClose={() => {setShow(false)}} show={show} player={player} UpdateSpellBook={UpdateSpellBook}/>
               </div>
               
               {/* <div>

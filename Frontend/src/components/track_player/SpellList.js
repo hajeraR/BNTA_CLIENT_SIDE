@@ -12,9 +12,9 @@ const SpellList = ({spells, UpdateSpellBook}) => {
 
 
     return(
-        <div className="spell-list">
+        <>
             {spellComponent}
-        </div>
+        </>
     )
 
 }

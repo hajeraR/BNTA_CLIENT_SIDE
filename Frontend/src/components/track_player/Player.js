@@ -56,7 +56,29 @@ const Player = () => {
         .then(getPlayerData)
     }
     
+    const postToBook = (newSpell) => {
+        fetch("http://localhost:8080/api/v1/spellbook", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newSpell)
+        })
+        .then(SpellBookData)
+    }
 
+    const updateCharacter = (id) => {
+        const characterToUpdate = players.find(player => player.id === id);
+
+        fetch(`http://localhost:8080/tasks/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(characterToUpdate)
+        })
+        .then(getPlayerData);
+    }
 
     return (
         <>
@@ -83,7 +105,7 @@ const Player = () => {
                   <ul className="player__items">
                       
                      
-                    <PlayerList players={players} savedSpells={savedSpells} getSpellBook={SpellBookData} deletePlayer={deletePlayer}/>
+                    <PlayerList players={players} savedSpells={savedSpells} getSpellBook={SpellBookData} deletePlayer={deletePlayer} UpdateSpellBook={postToBook}/>
                       
                   </ul>
                 </div>

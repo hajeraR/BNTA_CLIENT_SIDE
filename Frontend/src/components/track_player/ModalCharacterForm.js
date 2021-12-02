@@ -1,5 +1,5 @@
 import SpellList from "./SpellList";
-import { useState, useEffect } from "react";
+import { useState, useEffect} from "react";
 import "./ModalCharacterForm.css"
 import RaceList from "./RaceList";
 import ClassList from "./ClassList";
@@ -14,6 +14,7 @@ const ModalCharacterForm = ({close, onPlayerSubmission}) => {
     const [classids, setClassId] = useState(1);
     const [name, setName] = useState('');
     const [level, setLevel] = useState();
+
 
     // const getSpellData = () => {
     //     fetch("http://localhost:8080/api/v1/spells")
@@ -104,14 +105,8 @@ const ModalCharacterForm = ({close, onPlayerSubmission}) => {
 
     }
     
-    // const spellValidation = () => {
-
-    //     if (level < spells.level){
-    //         return (
-    //             <div>stop</div>
-    //         )
-    //     }
-    // }
+  
+  
 
     return(
         <div className="Modal_background">
@@ -154,6 +149,7 @@ const ModalCharacterForm = ({close, onPlayerSubmission}) => {
                            
                             <div className="formElement">
                                 <input type="submit" value="SUBMIT" />
+                                
                             </div>
                         </form>
                     </div>
