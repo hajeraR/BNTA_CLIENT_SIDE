@@ -1,9 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { Dropdown } from "react-bootstrap"
 import Spell from "./Spell";
 
-const SpellDetails = ({ selectedSchool, spells, search, handleSearching}) => {
+const SpellDetails = ({ canWizard, canWarlock, canSorcerer, canRanger, canPaladin, canDruid, canCleric, canBard, selectedSchool, spells, search, handleSearching}) => {
 
    
 
@@ -20,8 +19,69 @@ const SpellDetails = ({ selectedSchool, spells, search, handleSearching}) => {
         <section className="spells">
         <h1 className="headings">List of Spells</h1>
 
+        <div className="scrolling" >
+        <ul className="spells-checkbox-filter">
+            <li className="item">
+                <input id="bard" type="checkbox"  onChange={canBard}></input>
+                <label for="bard">
+                <span className="filter-img bard"></span>
+                <p className="icon-name">Bard</p>
+                </label>
+            </li>
+            <li className="item">
+                <input id="cleric" type="checkbox"  onChange={canCleric}></input>
+                <label for="cleric">
+                <span className="filter-img cleric"></span>
+                <p className="icon-name">Cleric</p>
+                </label>
+            </li>
+            <li className="item">
+                <input id="druid" type="checkbox"  onChange={canDruid}></input>
+                <label for="druid">
+                <span className="filter-img druid"></span>
+                <p className="icon-name">Druid</p>
+                </label>
+            </li>
+            <li className="item">
+                <input id="paladin" type="checkbox"  onChange={canPaladin}></input>
+                <label for="paladin">
+                <span className="filter-img paladin"></span>
+                <p className="icon-name">Paladin</p>
+                </label>
+            </li>
+            <li className="item">
+                <input id="ranger" type="checkbox"  onChange={canRanger}></input>
+                <label for="ranger">
+                <span className="filter-img ranger"></span>
+                <p className="icon-name">Ranger</p>
+                </label>
+            </li>
+            <li className="item">
+                <input id="sorcerer" type="checkbox"  onChange={canSorcerer}></input>
+                <label for="sorcerer">
+                <span className="filter-img sorcerer"></span>
+                <p className="icon-name">Sorcerer</p>
+                </label>
+            </li>
+            <li className="item">
+                <input id="warlock" type="checkbox"  onChange={canWarlock}></input>
+                <label for="warlock">
+                <span className="filter-img warlock"></span>
+                <p className="icon-name">Warlock</p>
+                </label>
+            </li>
+            <li className="item">
+                <input id="wizard" type="checkbox"  onChange={canWizard}></input>
+                <label for="wizard">
+                <span className="filter-img wizard"></span>
+                <p className="icon-name">Wizard</p>
+                </label>
+            </li>
+        </ul>
+        </div>
         <div className="filtering">
         <form>
+
             <select onChange={(e) => {selectedSchool(e.target.value)}}>
                 <option value="">Select a School</option>
                 <option value="1">Abjuration</option>
@@ -34,8 +94,8 @@ const SpellDetails = ({ selectedSchool, spells, search, handleSearching}) => {
                 <option value="8">Transmutation</option>
             </select>
 
-            
 
+            
             <div className="search-icon-container">
                 <FontAwesomeIcon  icon={faSearch} className="search-icon"/>
             </div>

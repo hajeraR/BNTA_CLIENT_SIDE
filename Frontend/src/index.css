@@ -35,7 +35,6 @@ body {
 }
 
 /*                Spells Section                */
-/* Container */
 .spells {
   display: flex;
   flex-direction: column;
@@ -44,7 +43,100 @@ body {
   background: var(--background);
 }
 
-/* Search Bar Related */
+/*                Spells Checkbox                 */
+@media screen and (min-width: 678px) {
+  .spells-checkbox-filter {
+    justify-content: center;
+  }
+}
+
+.scrolling {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 8px;
+  width: 100%;
+}
+
+.spells-checkbox-filter {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  cursor: pointer;
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 1rem;
+}
+
+.item input {
+  display: none;
+}
+
+.filter-img {
+    background-size: cover;
+    border-radius: 50%;
+    opacity: .5;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    height: 60px;
+    width: 60px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.bard {
+  background-image: url(./components/list_of_spells/icons/bard-icon.png);
+}
+
+.cleric {
+  background-image: url(./components/list_of_spells/icons/cleric-icon.png);
+}
+
+.druid {
+  background-image: url(./components/list_of_spells/icons/druid-icon.png);
+}
+
+.paladin {
+  background-image: url(./components/list_of_spells/icons/paladin-icon.png);
+}
+
+.ranger {
+  background-image: url(./components/list_of_spells/icons/ranger-icon.png);
+}
+
+.sorcerer {
+  background-image: url(./components/list_of_spells/icons/sorcerer-icon.png);
+}
+
+.warlock {
+  background-image: url(./components/list_of_spells/icons/warlock-icon.png);
+}
+
+.wizard {
+  background-image: url(./components/list_of_spells/icons/wizard-icon.png);
+}
+
+.icon-name {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+
+:checked+label > .filter-img {
+  border: 5px solid #777;
+  opacity: 1;
+}
+
+/*                Search Bar Related                */
 .search-bar {
   border: 1px solid grey;
   border-radius: 5px;
