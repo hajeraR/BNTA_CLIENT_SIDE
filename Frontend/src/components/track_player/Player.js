@@ -67,18 +67,18 @@ const Player = () => {
         .then(SpellBookData)
     }
 
-    const updateCharacter = (id) => {
-        const characterToUpdate = players.find(player => player.id === id);
+    // const updateCharacter = (id) => {
+    //     const characterToUpdate = players.find(player => player.id === id);
 
-        fetch(`http://localhost:8080/tasks/${id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(characterToUpdate)
-        })
-        .then(getPlayerData);
-    }
+    //     fetch(`http://localhost:8080/tasks/${id}`, {
+    //         method: 'PUT',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(characterToUpdate)
+    //     })
+    //     .then(getPlayerData);
+    // }
 
     return (
         <>

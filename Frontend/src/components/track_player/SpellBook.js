@@ -78,11 +78,11 @@ const SpellBook = (props, {UpdateSpellBook}) => {
         <div className={`modal-container ${props.show ? "show" : ""}`} onClick={props.onClose}>
             <section className="modal-content" onClick={e => e.stopPropagation()}>
             <div className="filter_spells">
-                        <form >
+                        <form onSubmit = {handleAddSpell}>
                         <div >
                             {/* <input type="search" placeholder="search spells" onChange={handleSearchChange} value={search}/> */}
                             <label htmlFor="name">CharacterID: </label>
-                            <input type="text" id="characterId" placeholder="CharacterId" onChange={handleCharacterIdChange}/>
+                            <input type="text" id="characterId" placeholder="CharacterId" onChange={handleCharacterIdChange} value={characterId}/>
                         </div>
 
                         <div className="add_spells">
