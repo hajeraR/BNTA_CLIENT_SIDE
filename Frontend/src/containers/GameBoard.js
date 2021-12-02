@@ -3,6 +3,8 @@ import SpellDetails from '../components/list_of_spells/SpellDetails.js';
 
 const GameBoard = () => {
 
+ 
+
   const [spells, setSpells] = useState([]);
 
   const getSpellData = () => {
@@ -26,6 +28,7 @@ const GameBoard = () => {
 
     return (
           <>
+          
           <SpellDetails spells={searching(spells)} search={search} handleSearching={handleSearching} />
           </>
         );

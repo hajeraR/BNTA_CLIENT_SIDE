@@ -1,15 +1,28 @@
 
   @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 
+
+
 .player__title{
     text-align: left;
     font-family: 'MedievalSharp', cursive;
+}
+
+.player__title.light-theme{
+    color: white;
+    background-color: brown;
+    
 }
 
 .player{
     padding: 1em;
     background:#fff;
     
+}
+
+.player.light-theme{
+    background: black;
+    color: white;
 }
 
 .player__list__title {
@@ -55,6 +68,10 @@
     font-family: 'MedievalSharp', cursive;
 }
 
+.player__button.light-theme{
+    background: brown;
+}
+
 .player__title {
     display: flex;
     justify-content: center;
@@ -63,6 +80,7 @@
 .player__details__info {
     font-family: 'MedievalSharp', cursive;
 }
+
 
 .delete__player {
     font-family: 'MedievalSharp', cursive;
@@ -79,6 +97,10 @@
     position: relative;
     z-index: 0;
     border-radius: 10px;
+}
+
+.player__spells__button.light-theme{
+    color: white;
 }
 
 .player__spells__button:before {
@@ -141,6 +163,10 @@
 
 .player__details__spellbook {
     font-weight: 100;
+}
+
+.player__details__spellbook.light-theme{
+    color: white
 }
 
 .player__delete__button {

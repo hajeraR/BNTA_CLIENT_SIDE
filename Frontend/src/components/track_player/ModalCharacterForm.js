@@ -15,14 +15,7 @@ const ModalCharacterForm = ({close, onPlayerSubmission}) => {
     const [name, setName] = useState('');
     const [level, setLevel] = useState();
 
-    // const getSpellData = () => {
-    //     fetch("http://localhost:8080/api/v1/spells")
-    //     .then((response) => response.json())
-    //     .then(data => setSpells(data));
-    
-    // }
-
-    // useEffect(getSpellData, []);
+  
 
     const getRaceData = () => {
         fetch("http://localhost:8080/api/v1/races")

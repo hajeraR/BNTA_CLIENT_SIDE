@@ -12,6 +12,34 @@ import SpellBook from './SpellBook';
 
 const Player = () => {
 
+    const changeColour = () => {
+
+        const player = document.querySelector('.player')
+        const darkmode = document.querySelector('.darkmode')
+        const details = document.querySelectorAll('.details')
+        const playerButton = document.querySelector('.player__button')
+        const playerTitle = document.querySelector('.player__title')
+        const playerSpell = document.querySelector('.player__spells__button')
+        const playerSpellBook = document.querySelector('.player__details__spellbook')
+        const modal = document.querySelector('.player__button__container')
+
+        darkmode.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme')
+            details.forEach((detail) => {
+                detail.classList.toggle('light-theme')
+            })
+            player.classList.toggle('light-theme')
+            playerButton.classList.toggle('light-theme')
+            playerTitle.classList.toggle('light-theme')
+            playerSpellBook.classList.toggle('light-theme')
+            playerSpell.classList.toggle('light-theme')
+            // modal.classList.toggle('light-theme')
+            
+        })
+
+
+    }
+
     const [modalShown, setModalShown] = useState(false);
     const [players, setPlayer] = useState([]);
     const [savedSpells, setSavedSpells] = useState([]);
@@ -64,6 +92,7 @@ const Player = () => {
          
             
         <div> 
+        <button className="darkmode" onClick={()=>{changeColour()}}>light/dark</button>
         <h1 className="player__title">
             Player Tracker 
         </h1>

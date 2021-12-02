@@ -23,6 +23,11 @@
     background: #fff;
 }
 
+.modal-content.light-theme{
+    background: black;
+    border: brown 2px solid;
+}
+
 .modal-header, .modal-footer {
     padding: 1rem;
 }
@@ -45,4 +50,9 @@
 
 .modal-close-btn {
     margin: auto;
+}
+
+.modal-close-btn.light-theme{
+    background: brown;
+    color: white;
 }

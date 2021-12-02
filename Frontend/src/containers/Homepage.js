@@ -10,8 +10,22 @@ import {
   } from "react-router-dom";
 const Homepage = () => {
 
+    const changeColour = () => {
+
+        const darkmode = document.querySelector('.darkmode')
+        const mainHeading = document.querySelector('.Mainheading')
+        darkmode.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme')
+            mainHeading.classList.toggle('light-theme')
+            
+        })
+
+
+    }
+
 return (
 <>
+<button className="darkmode" onClick={()=>{changeColour()}}>light/dark</button>
 <span id="bannerPic">
 <div id="homepageBanner">
 </div>

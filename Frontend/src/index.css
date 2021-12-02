@@ -29,11 +29,22 @@ body {
   font-size: 2.4rem;
 }
 
+body.light-theme{
+  background-color: black;
+}
+
 .headings {
   font-size: 4.4rem;
   color: var(--headings);
 }
 
+.headings.light-theme{
+  color: brown;
+}
+
+.Mainheading.light-theme{
+  color: brown;
+}
 
 /*                Spells Section                */
 
@@ -45,6 +56,11 @@ body {
   width: 100vw;
   height: 100vh;
   background: var(--background);
+}
+
+.spells.light-theme{
+  background: black;
+  color: white;
 }
 
 /* Search Bar Related */
@@ -326,10 +342,11 @@ h2 {
   font-size: 0.8em;
 }
 
-.modal_content{
-  
+.darkmode{
+  font-family: 'MedievalSharp', cursive;
+  color: white;
+  background-color: brown;
 }
-
 
 
 

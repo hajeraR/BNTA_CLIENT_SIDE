@@ -26,7 +26,7 @@
   .Modal_content{
     width: 30%;
     height: 60%;
-    background-color: #E0C0A6;
+    background-color: #8b5d37;
     border-radius: 12px;
     box-shadow: black 0px 5px 15px;
     display: flex;
@@ -41,6 +41,8 @@
               height 0.5s ease;
     
   }
+
+
 
   label {
     font-family: 'MedievalSharp', cursive;
@@ -314,3 +316,6 @@
     padding: 1em;
     font-family: 'MedievalSharp', cursive;
   }
+
+
+  

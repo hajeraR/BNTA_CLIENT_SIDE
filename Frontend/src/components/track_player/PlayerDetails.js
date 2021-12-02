@@ -18,6 +18,7 @@ const PlayerDetails = ({player, getSpellBook, savedSpells, deletePlayer}) => {
 
     return (
         <>
+          
           <ul className="player__item">
             <div className="player__details">
               <div className="player__delete__button">
