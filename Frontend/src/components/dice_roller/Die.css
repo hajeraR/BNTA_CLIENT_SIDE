@@ -14,12 +14,12 @@
 
 .dice-heading-double{
     margin: 0.4em;
-    margin-left: 2.3em;
+    margin-left: 2.25em;
 }
 
 .dice-heading-quad{
     margin: 0.4em;
-    margin-left: 5.8em;
+    margin-left: 6.5em;
 }
 
  .dice-box{
@@ -30,9 +30,51 @@
   border: 4px solid #3d2814;
   border-radius: 25%;
   box-shadow: 0 0 4px 4px #3d2814 inset;
-  box-shadow: 5px 10px 8px 10px #888888;
+  box-shadow: 5px 10px 8px 10px plum;
   background-color: #e7e2e2;
+  min-width: 192px;
 } 
+
+.dice-box-double8{
+    margin: 2.5em;
+  border: 4px solid #3d2814;
+  border-radius: 25%;
+  box-shadow: 0 0 4px 4px #3d2814 inset;
+  box-shadow: 5px 10px 8px 10px cadetblue;
+  background-color: #e7e2e2;
+  min-width: 204px;
+}
+
+.dice-box-double10{
+    margin: 2.5em;
+  border: 4px solid #3d2814;
+  border-radius: 25%;
+  box-shadow: 0 0 4px 4px #3d2814 inset;
+  box-shadow: 5px 10px 8px 10px green;
+  background-color: #e7e2e2;
+  min-width: 204px;
+}
+
+.dice-box-double12{
+    margin: 2.5em;
+  border: 4px solid #3d2814;
+  border-radius: 25%;
+  box-shadow: 0 0 4px 4px #3d2814 inset;
+  box-shadow: 5px 10px 8px 10px yellow;
+  background-color: #e7e2e2;
+  min-width: 204px;
+}
+
+
+.dice-box-quad{
+    margin: 2.5em;
+    border: 4px solid #3d2814;
+    border-radius: 25%;
+    box-shadow: 0 0 4px 4px #3d2814 inset;
+    box-shadow: 5px 10px 8px 10px darkorange;
+    background-color: #e7e2e2;
+  } 
+  
 
 .singleDie{
     margin-left: 1.5em;
@@ -43,21 +85,22 @@
 }
 
 .dice-total-double{
-    margin-left: 1.2em;
+    margin-left: 1.3em;
 }
 
 .dice-total-quad{
-    margin-left: 5em;
+    margin-left: 5.5em;
 }
- 
+
+
 /* add dice buttons below here using ids to create different colour variations for each dice */
 #dicebtn4 {
     margin: 0.5em;
     margin-bottom: 0em;
-    margin-left: 2em;
+    margin-left: 2.1em;
     font-size: 0.8em;
     border-radius: 25%;
-    background-color: cadetblue;
+    background-color: plum;
 }
 #dicebtn4:hover{
     background-color: #afabd6;
@@ -67,11 +110,11 @@
 
 #dicebtn6 {
     margin: 0.5em;
-    margin-left: 2em;
+    margin-left: 2.1em;
     font-size: 0.8em;
     margin-bottom: 0em;
     border-radius: 25%;
-    background-color: cadetblue;
+    background-color: plum;
 }
 #dicebtn6:hover{
     background-color: #afabd6;
@@ -81,7 +124,7 @@
 
 #dicebtn8 {
     margin: 0.5em;
-    margin-left: 2.3em;
+    margin-left: 2.7em;
     margin-top: 0.8em;
     font-size: 0.8em;
     margin-bottom: 0em;
@@ -89,47 +132,47 @@
     background-color: cadetblue
 }
 #dicebtn8:hover{
-    background-color: #afabd6;
+    background-color: lightblue;
     cursor: pointer;
 }
 
 
 #dicebtn10 {
     margin: 0.5em;
-    margin-left: 2.3em;
+    margin-left: 2.7em;
     margin-top: 0.8em;
     font-size: 0.8em;
     margin-bottom: 0em;
     border-radius: 25%;
-    background-color: cadetblue;
+    background-color: green;
 }
 #dicebtn10:hover{
-    background-color: #afabd6;
+    background-color: darkgreen;
     cursor: pointer;
 }
 
 #dicebtn12 {
     margin: 0.5em;
-    margin-left: 2.3em;
+    margin-left: 2.7em;
     margin-top: 0.8em;
     font-size: 0.8em;
     margin-bottom: 0em;
     border-radius: 25%;
-    background-color: cadetblue;
+    background-color: yellow;
 }
 #dicebtn12:hover{
-    background-color: #afabd6;
+    background-color: darkkhaki;
     cursor: pointer;
 }
 
 #dicebtn20 {
     margin: 0.5em;
-    margin-left: 7em;
+    margin-left: 8em;
     margin-top: 0.8em;
     font-size: 0.8em;
     margin-bottom: 0em;
     border-radius: 25%;
-    background-color: cadetblue;
+    background-color: darkorange;
 }
 #dicebtn20:hover{
     background-color: #afabd6;
@@ -146,22 +189,22 @@
 
 
 .shaking {
-    animation-name: shake;
+    animation-name: dice-shake;
     animation-duration: 1s;
 }
 
-@keyframes shake {
+@keyframes dice-shake {
     from {
         transform: translate3d(0,0,0);
     }
     15%{
-        transform: translate3d(-25%, 0, 0) rotate3d(0,0,1, -5deg);
+        transform: translate3d(-30%, 0, 0) rotate3d(0,0,1, -10deg);
     }
     30%{
-        transform: translate3d(20%, 0, 0) rotate3d(0,0,1, 3deg);
+        transform: translate3d(25%, 0, 0) rotate3d(0,0,1, 5deg);
     }
     45%{
-        transform: translate3d(-15%, 0, 0) rotate3d(0,0,1, -3deg);
+        transform: translate3d(-15%, 0, 0) rotate3d(0,0,1, -5deg);
     }
     60%{
         transform: translate3d(10%, 0, 0) rotate3d(0,0,1, -2deg);
@@ -175,4 +218,86 @@
         
     }
     
+}
+/* Media querys for dice section of homepage */
+
+@media screen and (min-width: 436px) {
+    .dice-box-quad{
+        margin: 0.4em;
+    }
+} 
+@media screen and (min-width: 600px) {
+    .dice-box-quad{
+        margin: 0.8em;
+    }
+} 
+
+@media screen and (max-width: 436px) {
+    .dice-box-quad{
+        margin: 0em;
+    }       
+}
+@media screen and (max-width: 420px) {
+    .dice-box-quad{
+        width: 30rem;
+        margin: 0em;
+        padding-left: 1.6em;
+    }
+    .dice-heading-quad{
+        margin-left: 2.5em;
+    }
+    .dice-total-quad{
+        margin-left: 1.6em;
+    }
+    #dicebtn20 {
+        margin-left: 3em; 
+    }
+}
+@media screen and (max-width: 334px) {
+    .dice-box-double8{
+        padding-left: 1.6em;
+        max-width: 204px;
+    }
+    .dice-box-double10{
+        padding-left: 1.6em;
+        max-width: 204px;
+    }
+    .dice-box-double12{
+        padding-left: 1.6em;
+        max-width: 204px;
+    }
+    .dice-heading-double{
+        margin-left: 0.5em;
+    }
+    #dicebtn8 {
+    margin-left: 0.3em;
+    }
+    #dicebtn10 {
+    margin-left: 0.3em;
+    }
+    #dicebtn12{
+    margin-left: 0.3em;
+    }
+    .dice-total-double{
+        margin-left: -0.5em;
+    }
+}
+@media screen and (max-width: 310px) {
+    .dice-box-double8{
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+    }
+    .dice-box-double10{
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+    }
+    .dice-box-double12{
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+    }
+    .dice-box{
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+    }
+
 }

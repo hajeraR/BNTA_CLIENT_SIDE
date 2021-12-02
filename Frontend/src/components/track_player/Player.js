@@ -4,11 +4,15 @@ import './Player.css';
 import ModalCharacterForm from './ModalCharacterForm';
 import PlayerList from './PlayerList';
 
+
 import {
     Link
   } from "react-router-dom";
 import Navbar from '../navbar/Navbar';
 import SpellBook from './SpellBook';
+
+
+
 
 const Player = () => {
 
@@ -89,6 +93,7 @@ const Player = () => {
     return (
         <>
         <Navbar />
+
          
             
         <div> 
@@ -100,10 +105,14 @@ const Player = () => {
 
         <div className="player">
 
+
             <div className="player__button__container">
-                <button className="player__button" onClick={() => {setModalShown(true);}}>Add Player</button>
+                <button className="player__button" onClick={() => {setModalShown(true);}}>
+                    Add Player
+                </button>
                 {modalShown && <ModalCharacterForm close={setModalShown} onPlayerSubmission={addNewPlayer}/>}
             </div>
+
 
             <div className="player__list__title">
                 <h3>List of all current players</h3>
@@ -117,16 +126,16 @@ const Player = () => {
                      
                     <PlayerList players={players} savedSpells={savedSpells} getSpellBook={SpellBookData} deletePlayer={deletePlayer}/>
                       
+
                   </ul>
                 </div>
-
             </div>
 
-            <div className="player-container-display">
+            <div className="player-container-display"></div>
+        
+        </main>
 
-            </div>
-            
-        </div>
+        </section>
         </>
     )
 }

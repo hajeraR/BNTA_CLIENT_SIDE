@@ -1,3 +1,5 @@
+/*                Spells Modal                 */
+
 .modal-container {
     position: fixed;
     left: 0;
@@ -19,7 +21,7 @@
 }
 
 .modal-content {
-    width: 70%;
+    width: 80%;
     background: #fff;
 }
 
@@ -35,6 +37,7 @@
 .modal-header{
     margin: 0;
     text-align: center;
+    font-size: 2.5rem;
 }
 
 .modal-body {
@@ -52,7 +55,37 @@
     margin: auto;
 }
 
+
 .modal-close-btn.light-theme{
     background: brown;
     color: white;
 }
+
+.modal-description--spells {
+    font-size: 1.1rem;
+}
+
+/*                              Spells Modal Tablet                              */
+@media screen and (min-width: 678px) {
+    .modal-header {
+      font-size: 2.7rem;
+    }
+  
+    .modal-description--spells {
+      font-size: 1.4rem;
+    }
+  
+  }
+
+  /*                              Spells Modal Tablet                              */
+@media screen and (min-width: 1024px) {
+    .modal-header {
+      font-size: 3rem;
+    }
+  
+    .modal-description--spells {
+      font-size: 1.7rem;
+    }
+  
+  }
+
