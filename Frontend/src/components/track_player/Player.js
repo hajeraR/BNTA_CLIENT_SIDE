@@ -133,9 +133,9 @@ const Player = () => {
 
             <div className="player-container-display"></div>
         
-        </main>
+        </div>
 
-        </section>
+        
         </>
     )
 }
