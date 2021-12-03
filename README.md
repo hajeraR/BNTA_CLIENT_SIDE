@@ -20,3 +20,21 @@ Before the end of the work day, we would all come together in a group call and t
 
 ## The challenges we faced
 
+Player Tracker Page - For the player tracker page, we faced some challenges revolving around being able to add a particular spell into a players list of current spells/spellbook. The idea was to use a post method to add the spell into the players spellbook however it wasnt possible it wasnt possible to access the players id prop. As a solution, we got around it by using a form, however when there was an error with the code not being able to recognise the fetch request as a function. Due to time constraints of the project, we didn't manage to fix this bug. Another issue with the player tracker page is that the API doesn't support a delete feature for players. As a solution, there is a button to track whether a player is dead or alive during the period of the game. 
+
+List of all spells page - (Vinh)
+
+Homepage - (Rashid)
+
+Key Features:
+
+Application fetches data from API and renders it on the page.
+User can add players to track their dnd game, search through all dnd spells, retrieve a list of current players spells(spellbook) and a dice roller to complement game playing.
+Light and dark mode on every page.
+Mobile friendly, responsive design for each page of the application.
+React router(V6) linking all the pages together. 
+
+Future Implementations:
+
+Currently the dice roller has an even chance to get every number so in the future with more time, possibly a different function can be used to get more realistic  and fair dice roll. 
+
