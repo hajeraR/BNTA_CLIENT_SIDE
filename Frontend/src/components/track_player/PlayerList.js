@@ -6,10 +6,9 @@ const PlayerList = ({players, getSpellBook, savedSpells, deletePlayer}) => {
 
     const playerComponent = players.map(player => {
         return(
-            <div>
-                <PlayerDetails player={player} key={player.id} getSpellBook={getSpellBook} savedSpells={savedSpells} deletePlayer={deletePlayer}/>
-              
-            </div>
+            <>
+                <PlayerDetails player={player} key={player.id} getSpellBook={getSpellBook} savedSpells={savedSpells} deletePlayer={deletePlayer}/>  
+            </>
             
         )
     })
@@ -18,9 +17,9 @@ const PlayerList = ({players, getSpellBook, savedSpells, deletePlayer}) => {
 
     return(
 
-        <div>
+        <>
             {playerComponent}
-        </div>
+        </>
     )
 }
 

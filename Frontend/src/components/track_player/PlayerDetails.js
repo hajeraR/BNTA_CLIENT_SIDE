@@ -41,8 +41,7 @@ const classIDConverter = (value) => {
     return (
         <>
           
-          <ul className="player__item">
-            <div className="player__details">
+          <li className="player__item">
               <div className="player__delete__button">
                 <button className="delete__player" onClick={() => changeText("dead")}> {alive}</button>
               </div>
@@ -88,8 +87,7 @@ const classIDConverter = (value) => {
                 {savedSpells.spellname}
             </div>
 
-            </div>
-          </ul>
+          </li>
 
       </>
     )

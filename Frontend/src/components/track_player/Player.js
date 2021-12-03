@@ -112,13 +112,11 @@ const Player = () => {
                     </div>
             
 
-                    <div className="player__container">
-                        <div className="player__wrapper">
+                        <div className="player-wrapper">
                             <ul className="player__items"> 
                                 <PlayerList players={players} savedSpells={savedSpells} getSpellBook={SpellBookData} deletePlayer={deletePlayer}/>
                             </ul>
                         </div>
-                    </div>
 
                     <div className="player-container-display"></div>
         

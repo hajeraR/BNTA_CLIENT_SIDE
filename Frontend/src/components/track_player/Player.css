@@ -28,18 +28,34 @@
     font-family: 'MedievalSharp', cursive;
 }
 
-.player__container {
+.player-wrapper {
     display: flex;
-    flex-flow: column;
-    align-items: center;
-    max-width: 1120px;
-    width: 90%;
-    margin: 0 auto;
+    justify-content: center;
 }
 
-.player__details__info {
+.player__items {
     display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
 
+.player__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #777;
+    border-radius: 4rem;
+    padding: 2rem;
+    width: 22.5rem;
+    background: #f5f5f5;
+}
+
+.player__details__info > h5 {
+    margin: 0.5rem;
 }
 
 
@@ -150,17 +166,6 @@
     100% { background-position: 0 0; }
 }
 
-
-/* .player__spells__button:hover {
-    font-family: 'MedievalSharp', cursive;
-    width: 130px;
-    padding: 0.3em;
-    border: 2px solid green;
-    color: black;
-    background: none;
-    cursor: pointer;
-    border-radius: 50px;
-} */
 
 .player__details__spellbook {
     font-weight: 100;
