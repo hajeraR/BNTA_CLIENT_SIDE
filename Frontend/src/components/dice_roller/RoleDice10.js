@@ -40,7 +40,6 @@ const RollDice10 = ({sides}) => {
                 <h4 className="dice-heading-double"> 10 Sided: </h4>
             <Die  face={String(die1)} rolling={rolling}/>
             <Die  face={String(die2)} rolling={rolling}/>
-            {/* <Die  face={String(die2)} rolling={rolling}/> */}
             </div>
             <div>
             <button id="dicebtn10" onClick={roll}  disabled={rolling}>
@@ -49,11 +48,6 @@ const RollDice10 = ({sides}) => {
             <h4 className="dice-total-double"> Dice roll = {diceTotal}</h4>
             </div>
         </div>
-            
-            {/* <Die  face="three"/>
-            <Die  face="four"/>
-            <Die  face="five"/>
-            <Die  face="six"/> */}
         </>
     )
 }

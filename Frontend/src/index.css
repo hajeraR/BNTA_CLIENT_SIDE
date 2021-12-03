@@ -401,6 +401,7 @@ td {
   text-align: center;
   height: 10em;
   margin-bottom: 4rem;
+  margin-right: 1rem;
   width: 100%;
   border-radius: 2em;
   font-size: 1.7em;
@@ -452,6 +453,8 @@ td {
   text-align: center;
   height: 10em;
   width: 100%;
+  margin-left: 1.5rem;
+  margin-right: 2rem;
   border: 2px solid rgb(223, 204, 167);
   border-radius: 2em;
   font-size: 1.7em;
@@ -581,14 +584,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
   }
 
   .main-box-spells {
-    margin-bottom: 0;
-    height: 8em;
-    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    height: 7em;
+    margin-left: 2rem;
   }
 
   .main-box-game {
-    height: 8em;
-    margin-right: 1.5rem;
+    height: 7em;
+    margin-right: 2.5rem;
   }
   .dice-title{
     font-size: 0.5em;
@@ -625,6 +629,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
   .main-box-spells__text {
     font-size: 4rem;
   }
+  .main-box-spells {
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    height: 8.5em;
+    margin-left: 2rem;
+  }
+
+  .main-box-game {
+    height: 8.5em;
+    margin-right: 3rem;
+  }
+
 
   .dice-title{
     font-size: 0.5em;
@@ -655,6 +671,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     .main-box-container{
       height: 45rem;
       width: 75rem;
+    }
+    .main-box-spells {
+      margin-bottom: 1.5rem;
+      margin-top: 1.5rem;
+      height: 9em;
+      margin-left: 2rem;
+    }
+  
+    .main-box-game {
+      height: 9em;
+      margin-right: 3rem;
     }
 
 
@@ -701,18 +728,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
   0% {opacity:0;}
   100% {opacity:0.75;}
 }
-.mainboxGame:hover{
+.main-box-game:hover{
   transition-delay: 3.4s;
 }
-.mainboxGameText:hover {
+.main-box-game__text:hover {
   opacity: 1.0;
   font-weight: bold;
   
 }
-.mainboxGameText:link{
+.main-box-game__text:link{
   text-decoration: none;
 }
-.mainboxGameText:hover{
+.main-box-game__text:hover{
   text-decoration: underline;
 }
 

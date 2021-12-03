@@ -25,9 +25,6 @@
  .dice-box{
   margin: 2.5em;
   font-family: 'MedievalSharp', cursive;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
   border: 4px solid rgb(95, 57, 95);
   border-radius: 25%;
   box-shadow: 0 0 4px 4px #3d2814 inset;

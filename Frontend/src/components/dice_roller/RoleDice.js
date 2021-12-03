@@ -48,10 +48,6 @@ const RollDice = ({sides}) => {
             </div>
         </div>
             
-            {/* <Die  face="three"/>
-            <Die  face="four"/>
-            <Die  face="five"/>
-            <Die  face="six"/> */}
         </>
     )
 }
