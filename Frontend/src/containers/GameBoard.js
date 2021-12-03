@@ -19,7 +19,7 @@ const GameBoard = () => {
   const [search, setSearch] = useState(""); 
 
   const handleSearching = (e) => {
-    setSearch(e.target.value); 
+    setSearch(e.target.value.toLowerCase()); 
 }
 
 const [selected, setSelected] = useState(null);
