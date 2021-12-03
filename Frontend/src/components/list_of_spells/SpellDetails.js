@@ -4,25 +4,20 @@ import Spell from "./Spell";
 
 const SpellDetails = ({ canWizard, canWarlock, canSorcerer, canRanger, canPaladin, canDruid, canCleric, canBard, selectedSchool, spells, search, handleSearching}) => {
 
-
-
     const changeColour = () => {
-
         const darkmode = document.querySelector('.darkmode')
         const spells = document.querySelector('.spells')
         const headings = document.querySelector('.headings')
         const content = document.querySelector('.modal-content')
         const closeBTN = document.querySelector('.modal-close-btn')
+
         darkmode.addEventListener('click', () => {
             document.body.classList.toggle('light-theme')
             spells.classList.toggle('light-theme')
             headings.classList.toggle('light-theme')
             content.classList.toggle('light-theme')
             closeBTN.classList.toggle('light-theme')
-    
         })
-    
-    
     }
 
 
@@ -128,6 +123,12 @@ const SpellDetails = ({ canWizard, canWarlock, canSorcerer, canRanger, canPaladi
 
         <div className="spells-container">
             <table className="spell-table">
+                <colgroup>
+                <col span="1"/>
+                <col span="1"/>
+                <col span="1"/>
+                <col span="1" style={{width: 0}}/>
+                </colgroup>
                 <thead>
                     <tr className="table-header">
                 <th>Spell Name</th>

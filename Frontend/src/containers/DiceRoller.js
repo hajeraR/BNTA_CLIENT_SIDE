@@ -9,7 +9,6 @@ import RollDice8 from "../components/dice_roller/RoleDice8";
 import RollDice10 from "../components/dice_roller/RoleDice10";
 import RollDice12 from "../components/dice_roller/RoleDice12";
 import RollDice20 from "../components/dice_roller/RoleDice20";
-import RollDicePercentage from "../components/dice_roller/RoleDicePercentage";
 
 const DiceRoller = () => {
 

@@ -36,6 +36,7 @@ body.light-theme{
 .headings {
   font-size: 3rem;
   color: var(--headings);
+  font-family: 'MedievalSharp', cursive;
 }
 
 
@@ -195,7 +196,6 @@ body.light-theme{
 .spells-container {
   border: 2px solid #777;
   display: inline-block;
-  height: 500px;
   overflow-y: auto;
   width: 80%;
   height: 60vh;
@@ -209,6 +209,12 @@ body.light-theme{
 .spell-table {
   border-collapse: collapse;
   width: 100%;
+  table-layout: fixed;
+  overflow: hidden;
+}
+
+col {
+  width: 0%;
 }
 
 .spell-table th {
@@ -357,6 +363,10 @@ td {
 /*                Homepage                 */
 .homepage {
   width: 100vw;
+}
+
+.homepage--darkmode {
+  position: absolute;
 }
 
 #homepage__banner {
@@ -780,4 +790,17 @@ h2 {
 
 .spell h3 {
   margin-left: 5%;
+}
+
+/*                Player Tracking                */
+.player-tracker-darkmode__container {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.player-tracker--darkmode {
+  display: block;
+  margin: auto;
 }

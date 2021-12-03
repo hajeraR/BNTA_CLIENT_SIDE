@@ -1,23 +1,22 @@
 
   @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 
-
-
+/*                              Heading                              */
 .player__title{
     text-align: left;
     font-family: 'MedievalSharp', cursive;
 }
 
+/* Heading Lightmode */
 .player__title.light-theme{
     color: white;
-    background-color: brown;
-    
+    background-color: brown;  
 }
 
+/*                              Body                                 */
 .player{
     padding: 1em;
-    background:#fff;
-    
+    background:#fff;  
 }
 
 .player.light-theme{

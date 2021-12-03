@@ -27,7 +27,7 @@ const Homepage = () => {
         <>
             <section className="homepage">
 
-                <button className="darkmode" onClick={() => { changeColour() }}>light/dark</button>
+                <button className="darkmode homepage--darkmode" onClick={() => { changeColour() }}>light/dark</button>
                 <span id="bannerPic">
                     <div id="homepage__banner">
                     </div>

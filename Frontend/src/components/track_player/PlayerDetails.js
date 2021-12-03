@@ -12,6 +12,28 @@ const PlayerDetails = ({player, getSpellBook, savedSpells, deletePlayer}) => {
   const [showSpells, setShowSpells] = useState(false);
   const [alive, setAlive] = useState("alive");
 
+  const raceIDConverter = (value) => {
+    if(value === 1) return "Dwarf";
+    if(value === 2) return "Halfling";
+    if(value === 3) return "Half-Elf";
+    if(value === 4) return "Human";
+    if(value === 5) return "Elf";
+    if(value === 6) return "Dragonborn";
+    if(value === 7) return "Half-Orc";
+    if(value === 8) return "Tiefling";
+    if(value === 9) return "Gnome";
+  }
+
+const classIDConverter = (value) => {
+  if(value === 1) return "Bard"
+  if(value === 2) return "Cleric"
+  if(value === 3) return "Druid"
+  if(value === 4) return "Paladin"
+  if(value === 5) return "Sorcerer"
+  if(value === 6) return "Warlock"
+  if(value === 7) return "Wizard"
+  if(value === 8) return "Ranger"
+}
 
   const changeText = (text) => setAlive(text);
 
@@ -32,13 +54,13 @@ const PlayerDetails = ({player, getSpellBook, savedSpells, deletePlayer}) => {
 
               <div className="player__details__info">
                 <h5>
-                  Race: {player.race_id}
+                  Race: {raceIDConverter(player.race_id)}
                 </h5>
               </div>
 
               <div className="player__details__info">
                 <h5>
-                  Class: {player.class_id}
+                  Class: {classIDConverter(player.class_id)}
                 </h5>
               </div>
 

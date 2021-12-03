@@ -259,7 +259,7 @@ const filteredSpells = () => spells.filter((spell) => {
     return (
           <>
 
-          <Navbar />
+          <Navbar prop={"player-tracker"} name={"Player Tracker ->"} />
           <SpellDetails canWizard={canWizard} canWarlock={canWarlock} canSorcerer={canSorcerer} canRanger={canRanger} canPaladin={canPaladin} canDruid={canDruid} canCleric={canCleric} canBard={canBard} selectedSchool={selectedSchool} spells={filteredSpells(spells)} search={search} handleSearching={handleSearching} />
           </>
         );
