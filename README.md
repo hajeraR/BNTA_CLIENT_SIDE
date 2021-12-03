@@ -26,7 +26,7 @@ List of all spells page - (Vinh)
 
 Homepage - (Rashid)
 
-Key Features:
+## Key Features:
 
 Application fetches data from API and renders it on the page.
 User can add players to track their dnd game, search through all dnd spells, retrieve a list of current players spells(spellbook) and a dice roller to complement game playing.
@@ -34,7 +34,7 @@ Light and dark mode on every page.
 Mobile friendly, responsive design for each page of the application.
 React router(V6) linking all the pages together. 
 
-Future Implementations:
+## Future Implementations:
 
 Currently the dice roller has an even chance to get every number so in the future with more time, possibly a different function can be used to get more realistic  and fair dice roll. 
 
