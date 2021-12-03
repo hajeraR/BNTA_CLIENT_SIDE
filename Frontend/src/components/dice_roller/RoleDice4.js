@@ -36,7 +36,7 @@ const RollDice4 = ({sides}) => {
         <div className="dice-box">
             <div className="singleDie">
                 <h4 className="dice-heading"> 4 Sided:</h4>
-            <Die face={String(die1)} rolling={rolling}/>
+            <Die  id="die" face={String(die1)} rolling={rolling}/>
             </div>
             <div >
             <button id="dicebtn4" onClick={roll}  disabled={rolling}>

@@ -27,10 +27,10 @@ const Homepage = () => {
         <>
             <section className="homepage">
 
-                <button className="darkmode" onClick={() => { changeColour() }}>light/dark</button>
                 <span id="bannerPic">
                     <div id="homepage__banner">
                     </div>
+                    <button className="darkmode" onClick={() => { changeColour() }}>light/dark</button>
                     <h1 className="main-heading">Welcome to DnD Spellbook</h1>
                 </span>
                 <main id="wrapper">
@@ -47,10 +47,9 @@ const Homepage = () => {
             </section>
 
             <i class="fab fa-d-and-d"></i>
-            <hr class="rounded" />
             <section className="homepage-dice">
                 <div className="dice__banner">
-                    <h4 className="dice-title" >Online Dice Roller <i class="fas fa-dice-d20"></i></h4>
+                    <h4 className="dice-title" >Digital Dice Roller <i class="fas fa-dice-d20"></i></h4>
                 </div>
                 <DiceRoller />
             </section>
