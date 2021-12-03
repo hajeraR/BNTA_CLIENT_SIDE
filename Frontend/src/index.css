@@ -490,7 +490,7 @@ td {
 .main-box-spells__text,
 .main-box-game__text {
   text-decoration: none;
-  font-size: 3.5rem;
+  font-size: 3.25rem;
 }
 
 .dice-title{
@@ -531,6 +531,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
   .main-box-game__text {
     font-size: 3.3rem;
   }
+  .main-box-game {
+    margin-left: 0rem;
+  }
 }
 
 
@@ -544,7 +547,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
   .dice-title{
     font-size: 0.3em;
     /* border: 4px solid hotpink; */
-    width: 3.2em;
+    width: 3em;
     margin-right: 0.5%;
     margin-bottom: 3.5rem;
     opacity: 70%;
@@ -581,6 +584,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     max-width: 550rem;
     background-image: url(../src/Images/ezgif.com-gif-makerQuicker.gif);
     background-size: 100% 100%;
+    box-shadow: 5px 10px 8px 10px rgb(75, 75, 75);
   }
 
   .main-box-spells {
@@ -627,7 +631,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
   }
   .main-box-game__text, 
   .main-box-spells__text {
-    font-size: 4rem;
+    font-size: 3.7rem;
   }
   .main-box-spells {
     margin-bottom: 1.5rem;
@@ -739,9 +743,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 .main-box-game__text:link{
   text-decoration: none;
 }
-.main-box-game__text:hover{
-  text-decoration: underline;
-}
+
 
 
 .player__spells {
