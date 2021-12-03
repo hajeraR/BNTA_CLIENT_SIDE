@@ -20,7 +20,7 @@ Before the end of the work day, we would all come together in a group call and t
 
 ## The challenges we faced
 
-Player Tracker Page - For the player tracker page, we faced some challenges revolving around being able to add a particular spell into a players list of current spells/spellbook. The idea was to use a post method to add the spell into the players spellbook however it wasnt possible it wasnt possible to access the players id prop. As a solution, we got around it by using a form, however when there was an error with the code not being able to recognise the fetch request as a function. Due to time constraints of the project, we didn't manage to fix this bug. Another issue with the player tracker page is that the API doesn't support a delete feature for players. As a solution, there is a button to track whether a player is dead or alive during the period of the game. 
+Player Tracker Page - For the player tracker page, we faced some challenges revolving around being able to add a particular spell into a players list of current spells/spellbook. The idea was to use a post method to add the spell into the players spellbook however it wasnt possible to access the players id prop. As a solution, we got around it by using a form, however when there was an error with the code not being able to recognise the fetch request as a function. Due to time constraints of the project, we didn't manage to fix this bug. Another issue with the player tracker page is that the API doesn't support a delete feature for players. As a solution, there is a button to track whether a player is dead or alive during the period of the game. 
 
 List of all spells page - (Vinh)
 
