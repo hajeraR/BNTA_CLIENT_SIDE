@@ -16,7 +16,6 @@
   }
 
   .Modal_content{
-    width: 60%;
     height: 53vh;
     background-color: #8b5d37;
     border-radius: 12px;
@@ -31,6 +30,7 @@
     overflow: hidden;
     transition: width 0.5s ease 0.5s, 
                 height 0.5s ease;
+              
   }
 
   /*                Modal Heading                */
@@ -70,9 +70,17 @@
     padding: 1.3em;
   }
 
+  .modal-content {
+    border-radius: 1em;
+    background-color: #E0C0A6;
+    text-align: center;
+    box-shadow: black 0px 5px 15px;
+    width: 50rem;
+  }
 
-
-
+  .modal-container {
+    z-index: 9999;
+  }
 
 
 
@@ -163,7 +171,6 @@
   
   .add_spells{
     margin: 5%;
-    width: 405px;
     overflow-y: scroll;
     height: 250px;
   }
@@ -259,15 +266,7 @@
   100% { background-position: 0 0; }
 }
 
-.modal-content {
-    width: 34%;
-    border-radius: 1em;
-    background-color: #E0C0A6;
-    text-align: center;
-    box-shadow: black 0px 5px 15px;
-  }
-
-
+/*                         Modal                        */
   .modal-searchbox{
     
     display: flex;
@@ -289,7 +288,7 @@
   /* player spells modal */
 
   .player__spells__modal {
-    width:30%;
+    width:50%;
     height:auto;
     border-radius: 1em;
     background-color: #E0C0A6;
@@ -302,8 +301,6 @@
     flex-direction: column;
     justify-content: space-around;
     padding: 1em;
-    
-    
   }
 
   .each__spell {
