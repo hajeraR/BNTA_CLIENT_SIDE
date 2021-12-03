@@ -108,55 +108,39 @@ const ModalCharacterForm = ({close, onPlayerSubmission}) => {
 
     return(
         <div className="Modal_background">
-            <div className="Modal_content">
+            <section className="Modal_content">
 
-                    <div className="form_top">
+                    <heading className="form_top">
                         <h2>Add New Player</h2>
                         <button onClick={() => close(false)}> X </button>
-                    </div>
+                    </heading>
 
-
+                    <main>
                         <form className="modal_mid_section" onSubmit={handleFormSubmission}>
                             <div className="formElement">
-                                <div>
                                     <label htmlFor="name">Name: </label>
-                                </div>
-                                <div className="formElement__name">
                                     <input type="text" id="name" placeholder="character name" onChange={handleNameChange}/>
-                                </div>
                             </div>
 
                             <div className="formElement">
-                                <div>
                                     <label htmlFor="Level">Level: </label>
-                                </div>
-                                <div className="formElement__level">
                                     <input type="text" id="level" placeholder="character level" onChange={handleLevelChange}/>
-                                </div>
                             </div>
 
                             <div className="formElement">
-                                <div>
                                     <label htmlFor="race">Race: </label>
-                                </div>
-                                <div className="formElement__race" >
                                     <select className="selectList__placeholder" name="selectList" id="selectList" onChange ={handleRaceChange}>
                                     <option>Select your race</option>
                                     <RaceList races={races}/>
                                 </select>   
-                                </div>
                             </div>
 
                             <div className="formElement">
-                                <div>
                                     <label htmlFor="class">Class: </label>
-                                </div>
-                                <div>
                                     <select className="selectList__placeholder" name="selectList" id="selectList" onChange ={handleClassNameChange}>
                                     <option>Select your class</option>
                                     <ClassList classes={classes}/>
                                     </select>
-                                </div>
                             </div>
                            
                             <div className="formElement">
@@ -165,11 +149,10 @@ const ModalCharacterForm = ({close, onPlayerSubmission}) => {
                                 </div>
                             </div>
 
-                        </form>
-            
-                
-               
-            </div>
+                        </form>  
+                    </main>
+
+            </section>
         </div>
     )
 }

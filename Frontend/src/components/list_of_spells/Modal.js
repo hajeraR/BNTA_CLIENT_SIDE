@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import "./modal.css";
+// import "./modal.css";
 
 const Modal = (props) => {
 

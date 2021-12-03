@@ -26,11 +26,10 @@ const Homepage = () => {
     return (
         <>
             <section className="homepage">
-
                 <span id="bannerPic">
                     <div id="homepage__banner">
                     </div>
-                    <button className="darkmode" onClick={() => { changeColour() }}>light/dark</button>
+                    <button className="darkmode homepage--darkmode" onClick={() => { changeColour() }}>light/dark</button>
                     <h1 className="main-heading">Welcome to DnD Spellbook</h1>
                 </span>
                 <main id="wrapper">

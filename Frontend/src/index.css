@@ -36,6 +36,7 @@ body.light-theme{
 .headings {
   font-size: 3rem;
   color: var(--headings);
+  font-family: 'MedievalSharp', cursive;
 }
 
 
@@ -49,7 +50,6 @@ body.light-theme{
 
 
 /*                Spells Section                */
-/* Container */
 .spells {
   display: flex;
   flex-direction: column;
@@ -64,20 +64,123 @@ body.light-theme{
 }
 
 /* Search Bar Related */
+/*                Spells Checkbox                 */
+@media screen and (min-width: 678px) {
+  .spells-checkbox-filter {
+    justify-content: center;
+  }
+}
+
+.scrolling {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 8px;
+  width: 100%;
+}
+
+.spells-checkbox-filter {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  cursor: pointer;
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 1rem;
+}
+
+.item input {
+  display: none;
+}
+
+.filter-img {
+    background-size: cover;
+    border-radius: 50%;
+    opacity: .5;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    height: 60px;
+    width: 60px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.bard {
+  background-image: url(./components/list_of_spells/icons/bard-icon.png);
+}
+
+.cleric {
+  background-image: url(./components/list_of_spells/icons/cleric-icon.png);
+}
+
+.druid {
+  background-image: url(./components/list_of_spells/icons/druid-icon.png);
+}
+
+.paladin {
+  background-image: url(./components/list_of_spells/icons/paladin-icon.png);
+}
+
+.ranger {
+  background-image: url(./components/list_of_spells/icons/ranger-icon.png);
+}
+
+.sorcerer {
+  background-image: url(./components/list_of_spells/icons/sorcerer-icon.png);
+}
+
+.warlock {
+  background-image: url(./components/list_of_spells/icons/warlock-icon.png);
+}
+
+.wizard {
+  background-image: url(./components/list_of_spells/icons/wizard-icon.png);
+}
+
+.icon-name {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+
+:checked+label > .filter-img {
+  border: 5px solid #777;
+  opacity: 1;
+}
+
+/*                Search Bar and dropdown Related                */
+.filtering {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 80%;
+  column-gap: 1rem;
+}
+
+
+
 .search-bar {
   border: 1px solid grey;
-  border-radius: 5px;
-  height: 2.5rem;
+  border-radius: 4px;
+  height: 3rem;
   width: 100%;
-  padding: 0.2rem 2rem 0.2rem 2rem;
-  outline: 0;
+  padding: 0.2rem 2rem;
   background-color: #f5f5f5;
+  grid-column-start: 1;
 }
 
 .search-icon-container {
   position: relative;
   display: flex;
-  min-width: 10rem;
+  /* min-width: 10rem; */
 }
 
 .search-icon {
@@ -93,7 +196,6 @@ body.light-theme{
 .spells-container {
   border: 2px solid #777;
   display: inline-block;
-  height: 500px;
   overflow-y: auto;
   width: 80%;
   height: 60vh;
@@ -107,6 +209,12 @@ body.light-theme{
 .spell-table {
   border-collapse: collapse;
   width: 100%;
+  table-layout: fixed;
+  overflow: hidden;
+}
+
+col {
+  width: 0%;
 }
 
 .spell-table th {
@@ -115,8 +223,8 @@ body.light-theme{
 }
 
 th {
-  background-color: #1976D2;
-  color: #fff;
+  background-color: rgba(230, 216, 198, 1);
+  color: rgba(67, 41, 5, 1);
 }
 
 .th, td {
@@ -148,6 +256,86 @@ td {
   overflow-wrap: anywhere;
 }
 
+/*                Spells Modal                 */
+
+.modal-container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.show {
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.modal-content {
+  width: 80%;
+  background: #fff;
+}
+
+.modal-header, .modal-footer {
+  padding: 1rem;
+}
+
+.modal-header{
+  margin: 0;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.modal-body {
+  padding: 1rem;
+  border-top: 1px solid #777;
+  border-bottom: 1px solid #777;
+  text-align: center;
+}
+
+.modal-footer {
+  display: flex;
+}
+
+.modal-close-btn {
+  margin: auto;
+}
+
+.modal-description--spells {
+  font-size: 1.1rem;
+}
+
+/*                              Spells Modal Tablet                              */
+@media screen and (min-width: 678px) {
+  .modal-header {
+    font-size: 2.7rem;
+  }
+
+  .modal-description--spells {
+    font-size: 1.4rem;
+  }
+
+}
+
+/*                              Spells Modal Tablet                              */
+@media screen and (min-width: 1024px) {
+  .modal-header {
+    font-size: 3rem;
+  }
+
+  .modal-description--spells {
+    font-size: 1.7rem;
+  }
+
+}
+
 /*                List of Spells Tablet                */
 @media screen and (min-width: 678px) {
   td {
@@ -175,6 +363,10 @@ td {
 /*                Homepage                 */
 .homepage {
   width: 100vw;
+}
+
+.homepage--darkmode {
+  position: absolute;
 }
 
 #homepage__banner {
@@ -593,4 +785,17 @@ h2 {
 
 .spell h3 {
   margin-left: 5%;
+}
+
+/*                Player Tracking                */
+.player-tracker-darkmode__container {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.player-tracker--darkmode {
+  display: block;
+  margin: auto;
 }
