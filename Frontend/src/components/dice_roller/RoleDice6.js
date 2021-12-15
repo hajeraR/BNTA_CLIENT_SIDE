@@ -10,21 +10,16 @@ const RollDice6 = ({sides}) => {
             diceTotal: 6,
     });
 
-
-    const { die1, die2, rolling, diceTotal } = state;
+    const { die1, rolling, diceTotal } = state;
 
     const roll = () => {
             const newDie1 = sides[Math.floor(Math.random() * sides.length)];
-            const newDie2 = sides[Math.floor(Math.random() * sides.length)];
-
             const total1 = Object.values(newDie1);
-            const total2 = Object.values(newDie2);
 
             setState({
                 die1: Object.keys(newDie1),
-                die2: Object.keys(newDie2),
                 rolling: true,
-                diceTotal: total1[0] /* + total2[0]   */
+                diceTotal: total1[0] 
             })
 
             setTimeout(() => {
@@ -38,7 +33,6 @@ const RollDice6 = ({sides}) => {
             <div className="singleDie">
                 <h4 className="dice-heading"> 6 Sided:</h4>
             <Die  face={String(die1)} rolling={rolling}/>
-            {/* <Die  face={String(die2)} rolling={rolling}/> */}
             </div>
             <div>
             <button id="dicebtn6" onClick={roll}  disabled={rolling}>
@@ -47,11 +41,6 @@ const RollDice6 = ({sides}) => {
             <h4 className="dice-total-single"> Dice roll = {diceTotal}</h4>
             </div>
         </div>
-            
-            {/* <Die  face="three"/>
-            <Die  face="four"/>
-            <Die  face="five"/>
-            <Die  face="six"/> */}
         </>
     )
 }

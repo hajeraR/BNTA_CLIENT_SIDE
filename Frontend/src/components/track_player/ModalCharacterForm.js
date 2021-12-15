@@ -71,12 +71,8 @@ const ModalCharacterForm = ({close, onPlayerSubmission}) => {
 
     const handleFormSubmission = (event) => {
 
-        console.log("submitting form")
         event.preventDefault();
 
-
-
-        //assign values to keys
         const newPlayer = {
             name: name,
             character_level: level,
@@ -85,26 +81,14 @@ const ModalCharacterForm = ({close, onPlayerSubmission}) => {
     
         }
 
-        //calling function to update state
         onPlayerSubmission(newPlayer);
 
-        //after submission clear form
         setName("");
         setLevel("");
         setRace([]);
         setClassName([])
-
-
     }
     
-    // const spellValidation = () => {
-
-    //     if (level < spells.level){
-    //         return (
-    //             <div>stop</div>
-    //         )
-    //     }
-    // }
 
     return(
         <div className="Modal_background">

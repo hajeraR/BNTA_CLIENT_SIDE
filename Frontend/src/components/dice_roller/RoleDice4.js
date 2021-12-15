@@ -25,10 +25,6 @@ const RollDice4 = ({sides}) => {
                 rolling: true,
                 diceTotal: total1[0]
             })
-
-            setTimeout(() => {
-                setState((prevState) => ({...prevState, rolling: false}))
-            }, 1000)
     }
 
     return (
